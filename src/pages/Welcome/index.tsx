@@ -6,13 +6,15 @@ import {
   NotificationOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb, Layout, Menu } from "antd";
+import { Breadcrumb, Layout, Menu, Input } from "antd";
 
 const { Header, Content, Footer, Sider } = Layout;
+
 const items1 = ["1", "2", "3"].map((key) => ({
   key,
   label: `nav ${key}`,
 }));
+
 const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
   (icon, index) => {
     const key = String(index + 1);
@@ -34,7 +36,6 @@ const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
 export const Welcome = () => (
   <Layout>
     <Header className="header">
-      <div className="logo" />
       <Menu
         theme="dark"
         mode="horizontal"
@@ -62,7 +63,7 @@ export const Welcome = () => (
           padding: "24px 0",
         }}
       >
-        <Sider className="site-layout-background" width={200}>
+        <Sider className="site-layout-background" width={150}>
           <Menu
             mode="inline"
             defaultSelectedKeys={["1"]}
@@ -77,6 +78,7 @@ export const Welcome = () => (
           style={{
             padding: "0 24px",
             minHeight: 280,
+            height: "70vh",
           }}
         >
           Content
@@ -88,7 +90,7 @@ export const Welcome = () => (
         textAlign: "center",
       }}
     >
-      Ant Design ©2018 Created by Ant UED
+      Todos os direitos reservados - Marlon Tereziano - 2022
     </Footer>
   </Layout>
 );
