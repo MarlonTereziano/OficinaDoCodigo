@@ -1,15 +1,12 @@
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import {Welcome} from '../pages/Welcome';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HomePage } from "../pages/HomePage";
 
-export default function AuthRoutes(){
-    return(
-        <BrowserRouter>
-            <Switch>
-                <Route exact path="/" component = {Welcome}/>
-            </Switch>
-        </BrowserRouter>
-
-    );
+export default function AuthRoutes() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-

@@ -1,18 +1,30 @@
-@font-face {
-    font-family: 'AGENCYB';
-    src: url('./assets/fonts/AFB.ttf') format('truetype');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  letter-spacing: 0.05rem;
 }
 
-@font-face {
-    font-family: 'AGENCYR';
-    src: url('./assets/fonts/AFB.ttf') format('truetype');
+button:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-* { 
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: AGENCYR,'Roboto', Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    
+hr {
+  height: 0.5rem;
+  border: none;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(210, 10, 153, 1) 0%,
+    rgba(252, 49, 118, 1) 35%,
+    rgba(251, 115, 18, 1) 100%
+  );
+}
+
+::-webkit-scrollbar {
+  width: 0; /* width of the entire scrollbar */
 }
