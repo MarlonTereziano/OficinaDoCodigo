@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@blockly/theme-dark": "^4.0.1",
     "@itseasy21/react-elastic-carousel": "^0.12.3",
     "antd": "^4.23.6",
     "axios": "^1.1.3",

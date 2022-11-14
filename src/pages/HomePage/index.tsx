@@ -5,7 +5,6 @@ import Blockly from "blockly";
 import ConfigFiles from "./initContent/content";
 import { Container, ContentGame } from "./styles";
 import { Header } from "../../components/header";
-// import DarkTheme from '@blockly/theme-dark';
 
 export function HomePage() {
   const [javascriptCode, setJavascriptCode] = useState("");
@@ -15,6 +14,7 @@ export function HomePage() {
     try {
       const code = Blockly.JavaScript.workspaceToCode(workspace);
       setJavascriptCode(code);
+      console.log(javascriptCode);
     } catch (e) {
       if (alertVar === 0) {
         alertVar += 1;
@@ -37,12 +37,11 @@ export function HomePage() {
             colour: "#ccc",
             snap: true,
           },
-          // theme: DarkTheme,
         }}
         onWorkspaceChange={workspaceDidChange}
       />
       <ContentGame>
-
+        <h1>{javascriptCode}</h1>
       </ContentGame>
     </Container>
   );

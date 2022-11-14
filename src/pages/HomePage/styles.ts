@@ -48,4 +48,14 @@ export const ContentGame = styled.div`
   align-items: center;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-items: center;
+  justify-content: center;
+
+  h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    font-size: 2rem;
+  }
 `;
