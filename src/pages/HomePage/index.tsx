@@ -1,9 +1,11 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState} from "react";
 
 import { BlocklyWorkspace } from "react-blockly";
 import Blockly from "blockly";
 import ConfigFiles from "./initContent/content";
-import { Container } from "./styles";
+import { Container, ContentGame } from "./styles";
+import { Header } from "../../components/header";
+// import DarkTheme from '@blockly/theme-dark';
 
 export function HomePage() {
   const [javascriptCode, setJavascriptCode] = useState("");
@@ -24,6 +26,7 @@ export function HomePage() {
 
   return (
     <Container>
+      <Header/>
       <BlocklyWorkspace
         toolboxConfiguration={ConfigFiles.INITIAL_TOOLBOX_JSON}
         className="fill-height"
@@ -34,9 +37,13 @@ export function HomePage() {
             colour: "#ccc",
             snap: true,
           },
+          // theme: DarkTheme,
         }}
         onWorkspaceChange={workspaceDidChange}
       />
+      <ContentGame>
+
+      </ContentGame>
     </Container>
   );
 }

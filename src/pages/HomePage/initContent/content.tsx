@@ -1,5 +1,26 @@
+import Blockly from "blockly/core";
+
 const INITIAL_XML =
   '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="text" x="70" y="30"><field name="TEXT"></field></block></xml>';
+
+
+const INITIAL_TOOLBOX_THEME = Blockly.Theme.defineTheme('dark', {
+    'base': Blockly.Themes.Classic,
+    'componentStyles': {
+      'workspaceBackgroundColour': '#1e1e1e',
+      'toolboxBackgroundColour': 'blackBackground',
+      'toolboxForegroundColour': '#fff',
+      'flyoutBackgroundColour': '#252526',
+      'flyoutForegroundColour': '#ccc',
+      'flyoutOpacity': 1,
+      'scrollbarColour': '#797979',
+      'insertionMarkerColour': '#fff',
+      'insertionMarkerOpacity': 0.3,
+      'scrollbarOpacity': 0.4,
+      'cursorColour': '#d0d0d0',
+      'blackBackground': '#333',
+    },
+  });
 
 const INITIAL_TOOLBOX_JSON = {
   kind: "categoryToolbox",
@@ -44,7 +65,7 @@ const INITIAL_TOOLBOX_JSON = {
     },
     {
       kind: "category",
-      name: "Loops",
+      name: "Laços",
       colour: 120,
       contents: [
         {
@@ -105,7 +126,7 @@ const INITIAL_TOOLBOX_JSON = {
     },
     {
       kind: "category",
-      name: "Math",
+      name: "Operadores",
       colour: 230,
       contents: [
         {
@@ -257,7 +278,7 @@ const INITIAL_TOOLBOX_JSON = {
     },
     {
       kind: "category",
-      name: "Text",
+      name: "Textos",
       colour: 160,
       contents: [
         {
@@ -404,7 +425,7 @@ const INITIAL_TOOLBOX_JSON = {
     },
     {
       kind: "category",
-      name: "Lists",
+      name: "Listas",
       colour: 259,
       contents: [
         {
@@ -517,79 +538,79 @@ const INITIAL_TOOLBOX_JSON = {
         },
       ],
     },
-    {
-      kind: "category",
-      name: "Colour",
-      colour: 19,
-      contents: [
-        {
-          kind: "block",
-          blockxml:
-            '    <block type="colour_picker">\n' +
-            '      <field name="COLOUR">#ff0000</field>\n' +
-            "    </block>\n",
-        },
-        {
-          kind: "block",
-          type: "colour_random",
-        },
-        {
-          kind: "block",
-          blockxml:
-            '    <block type="colour_rgb">\n' +
-            '      <value name="RED">\n' +
-            '        <shadow type="math_number">\n' +
-            '          <field name="NUM">100</field>\n' +
-            "        </shadow>\n" +
-            "      </value>\n" +
-            '      <value name="GREEN">\n' +
-            '        <shadow type="math_number">\n' +
-            '          <field name="NUM">50</field>\n' +
-            "        </shadow>\n" +
-            "      </value>\n" +
-            '      <value name="BLUE">\n' +
-            '        <shadow type="math_number">\n' +
-            '          <field name="NUM">0</field>\n' +
-            "        </shadow>\n" +
-            "      </value>\n" +
-            "    </block>\n",
-        },
-        {
-          kind: "block",
-          blockxml:
-            '    <block type="colour_blend">\n' +
-            '      <value name="COLOUR1">\n' +
-            '        <shadow type="colour_picker">\n' +
-            '          <field name="COLOUR">#ff0000</field>\n' +
-            "        </shadow>\n" +
-            "      </value>\n" +
-            '      <value name="COLOUR2">\n' +
-            '        <shadow type="colour_picker">\n' +
-            '          <field name="COLOUR">#3333ff</field>\n' +
-            "        </shadow>\n" +
-            "      </value>\n" +
-            '      <value name="RATIO">\n' +
-            '        <shadow type="math_number">\n' +
-            '          <field name="NUM">0.5</field>\n' +
-            "        </shadow>\n" +
-            "      </value>\n" +
-            "    </block>\n",
-        },
-      ],
-    },
+    // {
+    //   kind: "category",
+    //   name: "Colour",
+    //   colour: 19,
+    //   contents: [
+    //     {
+    //       kind: "block",
+    //       blockxml:
+    //         '    <block type="colour_picker">\n' +
+    //         '      <field name="COLOUR">#ff0000</field>\n' +
+    //         "    </block>\n",
+    //     },
+    //     {
+    //       kind: "block",
+    //       type: "colour_random",
+    //     },
+    //     {
+    //       kind: "block",
+    //       blockxml:
+    //         '    <block type="colour_rgb">\n' +
+    //         '      <value name="RED">\n' +
+    //         '        <shadow type="math_number">\n' +
+    //         '          <field name="NUM">100</field>\n' +
+    //         "        </shadow>\n" +
+    //         "      </value>\n" +
+    //         '      <value name="GREEN">\n' +
+    //         '        <shadow type="math_number">\n' +
+    //         '          <field name="NUM">50</field>\n' +
+    //         "        </shadow>\n" +
+    //         "      </value>\n" +
+    //         '      <value name="BLUE">\n' +
+    //         '        <shadow type="math_number">\n' +
+    //         '          <field name="NUM">0</field>\n' +
+    //         "        </shadow>\n" +
+    //         "      </value>\n" +
+    //         "    </block>\n",
+    //     },
+    //     {
+    //       kind: "block",
+    //       blockxml:
+    //         '    <block type="colour_blend">\n' +
+    //         '      <value name="COLOUR1">\n' +
+    //         '        <shadow type="colour_picker">\n' +
+    //         '          <field name="COLOUR">#ff0000</field>\n' +
+    //         "        </shadow>\n" +
+    //         "      </value>\n" +
+    //         '      <value name="COLOUR2">\n' +
+    //         '        <shadow type="colour_picker">\n' +
+    //         '          <field name="COLOUR">#3333ff</field>\n' +
+    //         "        </shadow>\n" +
+    //         "      </value>\n" +
+    //         '      <value name="RATIO">\n' +
+    //         '        <shadow type="math_number">\n' +
+    //         '          <field name="NUM">0.5</field>\n' +
+    //         "        </shadow>\n" +
+    //         "      </value>\n" +
+    //         "    </block>\n",
+    //     },
+    //   ],
+    // },
     { kind: "sep" },
-    {
-      kind: "category",
-      name: "Custom Button",
-      colour: 19,
-      contents: [
-        {
-          kind: "button",
-          text: "A button",
-          callbackKey: "myFirstButtonPressed",
-        },
-      ],
-    },
+    // {
+    //   kind: "category",
+    //   name: "Custom Button",
+    //   colour: 19,
+    //   contents: [
+    //     {
+    //       kind: "button",
+    //       text: "A button",
+    //       callbackKey: "myFirstButtonPressed",
+    //     },
+    //   ],
+    // },
     {
       kind: "category",
       name: "Variables",
@@ -1027,6 +1048,7 @@ const ConfigFiles = {
   INITIAL_TOOLBOX_XML,
   INITIAL_TOOLBOX_JSON,
   INITIAL_TOOLBOX_CATEGORIES,
+  INITIAL_TOOLBOX_THEME,
 };
 
 export default ConfigFiles;
