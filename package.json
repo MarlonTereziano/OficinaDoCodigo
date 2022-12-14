@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "@itseasy21/react-elastic-carousel": "^0.12.3",
+    "@toy-box/toybox-blockly": "^1.0.0",
     "antd": "^4.23.6",
     "axios": "^1.1.3",
-    "blockly": "^8.0.5",
     "react": "18.2.0",
     "react-blockly": "^7.0.1",
     "react-dom": "18.2.0",
