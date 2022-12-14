@@ -1113,11 +1113,6 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@blockly/theme-dark@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@blockly/theme-dark/-/theme-dark-4.0.1.tgz#cc1a83142556ff3667aeef3f4faddc6198cabd8f"
-  integrity sha512-OIfdnt3kvPnEW/TmfLPUftcekwoQGmxg/12LajYUdW9aOLMQaen16Vw0+BB8Q8zKInpxT6JCBYECilYRLY+RpA==
-
 "@csstools/normalize.css@*":
   version "12.0.0"
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-12.0.0.tgz#a9583a75c3f150667771f30b60d9f059473e62c4"
@@ -3085,10 +3080,10 @@ binary-extensions@^2.0.0:
   dependencies:
     jsdom "15.2.1"
 
-blockly@^8.0.5:
-  version "8.0.5"
-  resolved "https://registry.yarnpkg.com/blockly/-/blockly-8.0.5.tgz#66e96911a82dd54b52b8ddf56b2f2f9b523ce065"
-  integrity sha512-jgr3PHImkFYSC2pNWZ74TmXP1HdajxeRd2DQaAt+9I+XLl9RCWvInqNHcS+blsKBTn6zOIxHK6nLzRATbLrDSw==
+blockly@^5.20210325.1:
+  version "5.20210325.1"
+  resolved "https://registry.yarnpkg.com/blockly/-/blockly-5.20210325.1.tgz#c0a73174318dc61f4de116548ace2b2970dd4a58"
+  integrity sha512-qrilYPovJeDfxKDWm1YBUCPVNElh/iyC1szaHTIPZHj9C9YPpSzZOeFyyrPBbYRudzbo8kjBOWMtHnN1bLjkoQ==
   dependencies:
     jsdom "15.2.1"
 
