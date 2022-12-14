@@ -16,11 +16,7 @@ export function HomePage() {
       setJavascriptCode(code);
       console.log(javascriptCode);
     } catch (e) {
-      if (alertVar === 0) {
-        alertVar += 1;
-        alert("Esses blocos não encaixam!");
-        console.log("Esses blocos não encaixam!");
-      }
+      setJavascriptCode("");
     }
   }
 
