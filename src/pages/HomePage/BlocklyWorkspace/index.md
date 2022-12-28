@@ -1,4 +1,6 @@
+## 代码可视化编辑器
 
+```tsx
 import React, { useState } from "react";
 import Blockly from "blockly";
 import ZhHans from 'blockly/msg/zh-hans';
@@ -13,7 +15,7 @@ export default function App() {
 
   const initialXml =
     '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="text" x="70" y="30"><field name="TEXT"><field></block></xml>';
-  const customBlocks:any = {
+  const customBlocks = {
     cust: {
       json: {
         "message0": 'length of %1',
@@ -81,6 +83,10 @@ export default function App() {
       },
     ],
   };
+  const workspaceDidChange = (workspace) => {
+    const code = Blockly.JavaScript.workspaceToCode(workspace);
+    setJavascriptCode(code);
+  }
 
   return (
     <>
@@ -97,6 +103,7 @@ export default function App() {
             snap: true,
           },
         }}
+        onWorkspaceChange={workspaceDidChange}
         onXmlChange={setXml}
       />
       <pre id="generated-xml">{parse(xml)}</pre>
@@ -109,3 +116,4 @@ export default function App() {
     </>
   );
 }
+```
