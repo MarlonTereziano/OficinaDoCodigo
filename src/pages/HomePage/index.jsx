@@ -9,7 +9,7 @@ import { Header } from "../../components/header";
 
 export function HomePage() {
   const [javascriptCode, setJavascriptCode] = useState("");
-  const [xml, setXml] = useState("");
+  const [setXml] = useState("");
 
   let alertVar = 0;
   function workspaceDidChange(workspace) {
