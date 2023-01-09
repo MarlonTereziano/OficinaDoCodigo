@@ -34,8 +34,8 @@ export function HomePage() {
         className="fill-height"
         workspaceConfiguration={{
           grid: {
-            spacing: 20,
-            length: 3,
+            spacing: 15,
+            length: 4,
             colour: "#ccc",
             snap: true,
           },

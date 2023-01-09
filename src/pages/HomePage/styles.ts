@@ -6,7 +6,8 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to left, #359830, white);
+  /* background: linear-gradient(to top, var(--black), var(--white)); */
+  /* background-color: var(--white); */
 
   .blocklyWorkspace{
     width: 10rem;
@@ -21,9 +22,9 @@ export const Container = styled.div`
 
   .fill-height {
     margin-top: 5vw;
-    margin-left: 1vw;
+    margin-left: 20vw;
     height: 80vh;
-    width: 60vw;
+    width: 40vw;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
@@ -35,6 +36,7 @@ export const Container = styled.div`
   .blocklyToolboxDiv {
     background-color: white;
     width: 6rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   
 `;
