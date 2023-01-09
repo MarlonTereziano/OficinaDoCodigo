@@ -1,17 +1,28 @@
 @font-face {
-  font-family: 'AGENCYB';
-  src: url('./assets/fonts/AFB.ttf') format('truetype');
+  font-family: "AGENCYB";
+  src: url("./assets/fonts/AFB.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'AGENCYR';
-  src: url('./assets/fonts/AFB.ttf') format('truetype');
+  font-family: "AGENCYR";
+  src: url("./assets/fonts/AFB.ttf") format("truetype");
 }
 
-* { 
-  margin:0;
-  padding:0;
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MontserratExtraBold";
+  src: url("./assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: AGENCYR,'Roboto', Arial, Helvetica, sans-serif;
+  font-family: AGENCYR, Montserrat, MontserratExtraBold,
+    "Roboto", Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
