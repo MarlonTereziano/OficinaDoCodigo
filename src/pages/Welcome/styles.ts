@@ -58,8 +58,7 @@ export const Content = styled.div`
 
   button:hover{
     cursor: pointer;
-    filter: brightness(0.8);
-    transition: 0.5s;
+    border: 3px solid var(--white);
   }
 
   @keyframes blink {

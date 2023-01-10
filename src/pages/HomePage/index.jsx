@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
 // import { BlocklyWorkspace } from "react-blockly";
-import  BlocklyWorkspace  from "./BlocklyWorkspace/index";
+import BlocklyWorkspace from "./BlocklyWorkspace/index";
 import Blockly from "blockly";
 import ConfigFiles from "./initContent/content";
 import { Container, ContentGame } from "./styles";
 import { Header } from "../../components/header";
+import { TopBar } from "../../components/topBar";
 
 export function HomePage() {
   const [javascriptCode, setJavascriptCode] = useState("");
@@ -29,6 +30,7 @@ export function HomePage() {
   return (
     <Container>
       <Header />
+      <TopBar />
       <BlocklyWorkspace
         toolboxConfiguration={ConfigFiles.INITIAL_TOOLBOX_JSON}
         className="fill-height"

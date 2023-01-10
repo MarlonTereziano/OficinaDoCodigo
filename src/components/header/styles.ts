@@ -15,7 +15,6 @@ export const Container = styled.div`
   font-family: arial;
   font-size: 0.6vw;
   letter-spacing: 0.05rem;
-  box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
 
   span {
     display: flex;
