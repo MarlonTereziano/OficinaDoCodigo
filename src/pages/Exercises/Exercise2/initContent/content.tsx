@@ -3,10 +3,10 @@ import { blockRegistry } from "@toy-box/toybox-blockly";
 const INITIAL_XML =
   '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="text" x="70" y="30"><field name="TEXT"></field></block></xml>';
 
-const customBlocks: any = {
-  cust: {
+const customBlocks2: any = {
+  cust2: {
     json: {
-      message0: "teste3 %1",
+      message0: "teste2 %1",
       args0: [
         {
           type: "input_value",
@@ -22,8 +22,8 @@ const customBlocks: any = {
     code: "VALUE = 1;",
   },
 };
-Object.keys(customBlocks).map((key) =>
-  blockRegistry(key, customBlocks[key].json, customBlocks[key].code)
+Object.keys(customBlocks2).map((key) =>
+  blockRegistry(key, customBlocks2[key].json, customBlocks2[key].code)
 );
 
 const INITIAL_TOOLBOX_JSON = {
@@ -66,7 +66,7 @@ const INITIAL_TOOLBOX_JSON = {
       contents: [
         {
           kind: "block",
-          type: "cust",
+          type: "cust2",
         },
       ],
     },

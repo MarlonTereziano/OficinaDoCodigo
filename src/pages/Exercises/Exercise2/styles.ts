@@ -21,7 +21,7 @@ export const Container = styled.div`
   }
 
   .fill-height {
-    margin-top: 8vw;
+    margin-top: 7.5vw;
     margin-left: 1vw;
     margin-right: 1vw;
     height: 78vh;
@@ -30,9 +30,9 @@ export const Container = styled.div`
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
-  /* .blocklyToolboxContents{
+  .blocklyToolboxContents{
     background-color: red;
-  } */
+  }
 
   .blocklyToolboxDiv {
     background-color: white;
@@ -43,7 +43,7 @@ export const Container = styled.div`
 `;
 
 export const ContentGame = styled.div`
-  margin-top: 8vw;
+  margin-top: 7.5vw;
   margin-right: 1vw;
   width: 25vw;
   height: 50vh;
@@ -64,7 +64,7 @@ export const ContentGame = styled.div`
 `;
 
 export const ContentText = styled.div`
-  margin-top: 8vw;
+  margin-top: 7.5vw;
   margin-left: 1vw;
   width: 35vw;
   height: 78vh;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
-  height: 12vh;
+  height: 5vw;
   top: 0;
   background-color: var(--black);
   position: absolute;
@@ -15,6 +15,12 @@ export const Container = styled.div`
   font-family: arial;
   font-size: 0.6vw;
   letter-spacing: 0.05rem;
+
+  h1{
+    font-family: AGENCYR;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+  }
 
   span {
     display: flex;

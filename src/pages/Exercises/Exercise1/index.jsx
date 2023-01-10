@@ -4,10 +4,10 @@ import BlocklyWorkspace from "./BlocklyWorkspace/index";
 import Blockly from "blockly";
 import ConfigFiles from "./initContent/content";
 import { Container, ContentGame, ContentText } from "./styles";
-import { Header } from "../../components/header";
-import { TopBar } from "../../components/topBar";
+import { Header } from "../../../components/header";
+import { TopBar } from "../../../components/topBar";
 
-export function HomePage() {
+export function Exercise1() {
   const [javascriptCode, setJavascriptCode] = useState("");
   const [setXml] = useState("");
 
@@ -31,7 +31,7 @@ export function HomePage() {
       <Header />
       <TopBar />
       <ContentText>
-        <h1>Explicações aqui</h1>
+        <h1>Explicações aqui Exercício 1</h1>
       </ContentText>
       <BlocklyWorkspace
         toolboxConfiguration={ConfigFiles.INITIAL_TOOLBOX_JSON}

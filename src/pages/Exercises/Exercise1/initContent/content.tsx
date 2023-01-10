@@ -6,7 +6,7 @@ const INITIAL_XML =
 const customBlocks: any = {
   cust: {
     json: {
-      message0: "teste3 %1",
+      message0: "Sigas %1",
       args0: [
         {
           type: "input_value",

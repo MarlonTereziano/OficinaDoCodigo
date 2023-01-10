@@ -11,7 +11,7 @@ export const Container = styled.div`
   background-color: #71c837;
   position: absolute;
   top: 0;
-  margin-top: 5.6vw;
+  margin-top: 5vw;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
 
   h1{

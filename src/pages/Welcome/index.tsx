@@ -21,9 +21,9 @@ export const Welcome = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setTest(<button onClick={()=>navigate("/home")}>Começar Agora!</button>);
+      setTest(<button onClick={()=>navigate("/ex1")}>Começar Agora!</button>);
     }, 5500);
-  }, []);
+  }, [navigate]);
 
   return (
     <Container>
