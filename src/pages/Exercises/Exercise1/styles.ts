@@ -12,7 +12,7 @@ export const Container = styled.div`
   .blocklyWorkspace{
     width: 10rem;
     height: 10rem;
-    margin-top: 8vw;
+    margin-top: 7.5vw;
     margin-left: 1vw;
     height: 78vh;
     width: 60vw;
@@ -21,7 +21,7 @@ export const Container = styled.div`
   }
 
   .fill-height {
-    margin-top: 8vw;
+    margin-top: 7.5vw;
     margin-left: 1vw;
     margin-right: 1vw;
     height: 78vh;
@@ -43,7 +43,7 @@ export const Container = styled.div`
 `;
 
 export const ContentGame = styled.div`
-  margin-top: 8vw;
+  margin-top: 7.5vw;
   margin-right: 1vw;
   width: 25vw;
   height: 50vh;
@@ -64,7 +64,7 @@ export const ContentGame = styled.div`
 `;
 
 export const ContentText = styled.div`
-  margin-top: 8vw;
+  margin-top: 7.5vw;
   margin-left: 1vw;
   width: 35vw;
   height: 78vh;
