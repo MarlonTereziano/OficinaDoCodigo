@@ -6,7 +6,7 @@ const INITIAL_XML =
 const customBlocks: any = {
   cust: {
     json: {
-      message0: "Sigas %1",
+      message0: "Siga %1",
       args0: [
         {
           type: "input_value",
@@ -19,7 +19,7 @@ const customBlocks: any = {
       helpUrl: "http://www.w3schools.com/jsref/jsref_length_string.asp",
       // previousStatement: null,
     },
-    code: "VALUE = 1;",
+    code: "VALUE = 1",
   },
 };
 Object.keys(customBlocks).map((key) =>

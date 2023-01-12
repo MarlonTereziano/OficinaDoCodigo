@@ -3,9 +3,13 @@ import React, { useState } from "react";
 import BlocklyWorkspace from "./BlocklyWorkspace/index";
 import Blockly from "blockly";
 import ConfigFiles from "./initContent/content";
-import { Container, ContentGame, ContentText } from "./styles";
+
+import { Container, ContentGame, ContentText, Panda } from "./styles";
+
 import { Header } from "../../../components/header";
 import { TopBar } from "../../../components/topBar";
+
+import panda from "../../../assets/images/panda.png";
 
 export function Exercise1() {
   const [javascriptCode, setJavascriptCode] = useState("");
@@ -48,7 +52,10 @@ export function Exercise1() {
         onWorkspaceChange={workspaceDidChange}
       />
       <ContentGame>
-        <h1>{javascriptCode}</h1>
+        <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
+        <Panda src={panda} alt="panda" move={(4+parseInt(javascriptCode)+'rem')}/>
+        {console.log(4+parseInt(javascriptCode)+'rem')}
+        {/* <h1>{javascriptCode}</h1> */}
       </ContentGame>
     </Container>
   );
