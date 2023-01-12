@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import BlocklyWorkspace from "./BlocklyWorkspace/index";
 import Blockly from "blockly";
-import ConfigFiles from "./initContent/content";
+import ConfigFiles from "./CustomBlocks/content";
 
 import { Container, ContentGame, ContentText, Panda } from "./styles";
 
@@ -13,6 +13,7 @@ import panda from "../../../assets/images/panda.png";
 
 export function Exercise1() {
   const [javascriptCode, setJavascriptCode] = useState("");
+  // const [test, setTest] = useState();
   const [setXml] = useState("");
 
   let alertVar = 0;
@@ -20,7 +21,6 @@ export function Exercise1() {
     try {
       const code = Blockly.JavaScript.workspaceToCode(workspace);
       setJavascriptCode(code);
-      console.log(javascriptCode);
     } catch (e) {
       if (alertVar === 0) {
         alertVar += 1;
@@ -28,6 +28,7 @@ export function Exercise1() {
         console.log("Esses blocos não encaixam!");
       }
     }
+    console.log("entrou");
   }
 
   return (
@@ -54,8 +55,7 @@ export function Exercise1() {
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
         <Panda src={panda} alt="panda" move={(4+parseInt(javascriptCode)+'rem')}/>
-        {console.log(4+parseInt(javascriptCode)+'rem')}
-        {/* <h1>{javascriptCode}</h1> */}
+        <h1>{javascriptCode}</h1>
       </ContentGame>
     </Container>
   );

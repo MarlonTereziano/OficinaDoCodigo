@@ -82,22 +82,16 @@ export const ContentGame = styled.div`
   align-items: center;
   justify-content: center;
 
-  h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: red;
-    font-size: 2rem;
-    background-color: transparent;
-    color: transparent;
-  }
-
   .titleGame {
     position: absolute;
     background-color: transparent;
     color: #d40000;
     font-size: 1.3rem;
     margin-top: -20rem;
+  }
+
+  h1{
+    position: absolute;
   }
 `;
 
