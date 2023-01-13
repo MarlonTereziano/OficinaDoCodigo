@@ -6,18 +6,34 @@ const INITIAL_XML =
 const customBlocks: any = {
   cust: {
     json: {
-      message0: "Siga %1",
+      message0: "SIGA EM FRENTE %1",
       args0: [
         {
           type: "input_value",
           name: "VALUE",
         },
       ],
-      output: "Number",
+      output: "VALUE",
       colour: "#0095d7",
       tooltip: "Returns number of letters in the provided text.",
       helpUrl: "http://www.w3schools.com/jsref/jsref_length_string.asp",
-      // previousStatement: null,
+    },
+    code: "VALUE = 1",
+  },
+  custom2: {
+    json: {
+      message0: "SIGA EM FRENTE %1",
+      args0: [
+        {
+          type: "input_value",
+          name: "VALUE",
+        },
+      ],
+      previousStatement: null,
+      // nextStatement: null,
+      colour: "#0095d7",
+      tooltip: "Returns number of letters in the provided text.",
+      helpUrl: "http://www.w3schools.com/jsref/jsref_length_string.asp",
     },
     code: "VALUE = 1",
   },
@@ -61,13 +77,17 @@ const INITIAL_TOOLBOX_JSON = {
     // },
     {
       kind: "category",
-      name: "Blocos!",
+      name: "BLOCOS!",
       colour: "#0095d7",
       contents: [
         {
           kind: "block",
           type: "cust",
         },
+        {
+          kind: "block",
+          type: "custom2",
+        }
       ],
     },
   ],

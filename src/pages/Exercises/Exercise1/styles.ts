@@ -40,6 +40,14 @@ export const Container = styled.div`
     background-color: red;
   } */
 
+  .blocklyToolboxContents .blocklyToolboxCategory .blocklyTreeRow .blocklyTreeRowContentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin-left: -1rem;
+  }
+
   .blocklyToolboxDiv {
     background-color: white;
     width: 6rem;
@@ -92,6 +100,13 @@ export const ContentGame = styled.div`
 
   h1{
     position: absolute;
+  }
+
+  .bambu{
+    position: absolute;
+    margin-top: -13.8rem;
+    margin-right: -13rem;
+    width: 2.5rem;
   }
 `;
 

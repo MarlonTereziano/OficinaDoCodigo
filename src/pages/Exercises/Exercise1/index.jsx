@@ -10,13 +10,17 @@ import { Header } from "../../../components/header";
 import { TopBar } from "../../../components/topBar";
 
 import panda from "../../../assets/images/panda.png";
+import bambu from "../../../assets/images/bambu.png";
 
 export function Exercise1() {
   const [javascriptCode, setJavascriptCode] = useState("");
-  // const [test, setTest] = useState();
+  const [countBlocks, setCountBlocks] = useState();
+  const [countBlocks2, setCountBlocks2] = useState();
+  const [aux, setAux] = useState(0);
   const [setXml] = useState("");
 
   let alertVar = 0;
+
   function workspaceDidChange(workspace) {
     try {
       const code = Blockly.JavaScript.workspaceToCode(workspace);
@@ -28,7 +32,14 @@ export function Exercise1() {
         console.log("Esses blocos não encaixam!");
       }
     }
-    console.log("entrou");
+    setCountBlocks(Blockly.mainWorkspace.getTopBlocks().length);
+    setCountBlocks2(Blockly.mainWorkspace.getAllBlocks().length);
+    if(countBlocks === 0 && countBlocks2 === 0){
+      setAux(0);
+    }else{
+      setAux(countBlocks2 - countBlocks + 1);
+    }
+    console.log(aux);
   }
 
   return (
@@ -51,11 +62,13 @@ export function Exercise1() {
         }}
         onXmlChange={setXml}
         onWorkspaceChange={workspaceDidChange}
+        
       />
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
-        <Panda src={panda} alt="panda" move={(4+parseInt(javascriptCode)+'rem')}/>
-        <h1>{javascriptCode}</h1>
+        <Panda src={panda} alt="panda" move={(5*aux+'rem')}/>
+        {console.log((4.5*aux+'rem'))}
+        <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
     </Container>
   );
