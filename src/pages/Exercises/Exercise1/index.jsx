@@ -25,6 +25,7 @@ export function Exercise1() {
     try {
       const code = Blockly.JavaScript.workspaceToCode(workspace);
       setJavascriptCode(code);
+      console.log(javascriptCode);
     } catch (e) {
       if (alertVar === 0) {
         alertVar += 1;
@@ -34,12 +35,11 @@ export function Exercise1() {
     }
     setCountBlocks(Blockly.mainWorkspace.getTopBlocks().length);
     setCountBlocks2(Blockly.mainWorkspace.getAllBlocks().length);
-    if(countBlocks === 0 && countBlocks2 === 0){
+    if (countBlocks === 0 && countBlocks2 === 0) {
       setAux(0);
-    }else{
+    } else {
       setAux(countBlocks2 - countBlocks + 1);
     }
-    console.log(aux);
   }
 
   return (
@@ -62,12 +62,11 @@ export function Exercise1() {
         }}
         onXmlChange={setXml}
         onWorkspaceChange={workspaceDidChange}
-        
       />
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
-        <Panda src={panda} alt="panda" move={(5*aux+'rem')}/>
-        {console.log((4.5*aux+'rem'))}
+        <Panda src={panda} alt="panda" move={5 * aux + "rem"} />
+        {console.log(4.5 * aux + "rem")}
         <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
     </Container>
