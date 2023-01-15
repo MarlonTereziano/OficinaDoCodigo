@@ -40,6 +40,8 @@ export function Exercise1() {
     } else {
       setAux(countBlocks2 - countBlocks + 1);
     }
+    console.log(aux);
+    console.log(countBlocks);
   }
 
   return (
@@ -66,7 +68,6 @@ export function Exercise1() {
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
         <Panda src={panda} alt="panda" move={5 * aux + "rem"} />
-        {console.log(4.5 * aux + "rem")}
         <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
     </Container>

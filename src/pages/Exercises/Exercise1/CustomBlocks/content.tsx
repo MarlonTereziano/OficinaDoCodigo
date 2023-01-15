@@ -6,7 +6,7 @@ const INITIAL_XML =
 const customBlocks: any = {
   cust: {
     json: {
-      message0: "SIGA EM FRENTE %1",
+      message0: "SIGA %1",
       args0: [
         {
           type: "input_value",
@@ -20,23 +20,33 @@ const customBlocks: any = {
     },
     code: "VALUE = 1",
   },
-  custom2: {
-    json: {
-      message0: "SIGA EM FRENTE %1",
-      args0: [
-        {
-          type: "input_value",
-          name: "VALUE",
-        },
-      ],
-      previousStatement: null,
-      // nextStatement: null,
-      colour: "#0095d7",
-      tooltip: "Returns number of letters in the provided text.",
-      helpUrl: "http://www.w3schools.com/jsref/jsref_length_string.asp",
-    },
-    code: "VALUE = 1",
-  },
+  // custom2: {
+  //   json: {
+  //     type: "block_type",
+  //     message0: "%1 %2",
+  //     args0: [
+  //       {
+  //         type: "field_image",
+  //         src: "https://www.gstatic.com/codesite/ph/images/star_on.gif",
+  //         width: 15,
+  //         height: 15,
+  //         alt: "*",
+  //         flipRtl: false,
+  //       },
+  //       {
+  //         type: "input_value",
+  //         name: "NAME",
+  //         align: "RIGHT",
+  //       },
+  //     ],
+  //     previousStatement: null,
+  //     nextStatement: null,
+  //     colour: 230,
+  //     tooltip: "",
+  //     helpUrl: "",
+  //   },
+  //   // code: "VALUE = 1",
+  // },
 };
 Object.keys(customBlocks).map((key) =>
   blockRegistry(key, customBlocks[key].json, customBlocks[key].code)
@@ -45,36 +55,6 @@ Object.keys(customBlocks).map((key) =>
 const INITIAL_TOOLBOX_JSON = {
   kind: "categoryToolbox",
   contents: [
-    // {
-    //   kind: "category",
-    //   name: "Logic",
-    //   colour: "#5C81A6",
-    //   contents: [
-    //     {
-    //       kind: "block",
-    //       type: "controls_if",
-    //     },
-    //     {
-    //       kind: "block",
-    //       type: "logic_compare",
-    //     },
-    //   ],
-    // },
-    // {
-    //   kind: "category",
-    //   name: "Math",
-    //   colour: "#5CA65C",
-    //   contents: [
-    //     {
-    //       kind: "block",
-    //       type: "math_round",
-    //     },
-    //     {
-    //       kind: "block",
-    //       type: "math_number",
-    //     },
-    //   ],
-    // },
     {
       kind: "category",
       name: "BLOCOS!",
@@ -84,10 +64,10 @@ const INITIAL_TOOLBOX_JSON = {
           kind: "block",
           type: "cust",
         },
-        {
-          kind: "block",
-          type: "custom2",
-        }
+        // {
+        //   kind: "block",
+        //   type: "custom2",
+        // },
       ],
     },
   ],

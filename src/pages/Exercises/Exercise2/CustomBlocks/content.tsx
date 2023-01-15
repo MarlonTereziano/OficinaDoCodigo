@@ -6,26 +6,28 @@ const INITIAL_XML =
 const customBlocks: any = {
   cust2: {
     json: {
-      type: "example_number",
-      message0: "number: %1",
-      args0: [
-        {
-          type: "input_statement",
-          name: "FIELDNAME",
-          value: 100,
-          min: 0,
-          max: 100,
-          precision: 10,
-        },
-      ],
-    },
-  },
-  cust3: {
-    json: {
       message0: "SIGA %1 VEZES",
       args0: [
         {
           type: "input_value",
+          name: "VALUE",
+        },
+      ],
+      nextStatement: null,
+      output: "VALUE",
+      colour: "#0095d7",
+      tooltip: "Returns number of letters in the provided text.",
+      helpUrl: "http://www.w3schools.com/jsref/jsref_length_string.asp",
+    },
+    code: "VALUE = 1"
+  },
+  cust3: {
+    json: {
+      message0: "%1",
+      type: "input_value",
+      args0: [
+        {
+          type: "field_input",
           name: "VALUE",
         },
       ],
@@ -34,7 +36,6 @@ const customBlocks: any = {
       tooltip: "Returns number of letters in the provided text.",
       helpUrl: "http://www.w3schools.com/jsref/jsref_length_string.asp",
     },
-    code: "VALUE = 1",
   },
 
   // custom2: {
@@ -85,6 +86,11 @@ const INITIAL_TOOLBOX_JSON = {
           kind: "block",
           type: "cust3",
         },
+        {
+          kind: "block",
+          type: "math_number",
+        },
+        
       ],
     },
   ],
