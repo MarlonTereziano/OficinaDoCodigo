@@ -12,7 +12,7 @@ import { TopBar } from "../../../components/topBar";
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
 
-export function Exercise2() {
+export function Exercise3() {
   const [javascriptCode, setJavascriptCode] = useState("");
   const [setXml] = useState("");
 

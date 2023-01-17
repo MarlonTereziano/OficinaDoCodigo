@@ -4,7 +4,7 @@ const INITIAL_XML =
   '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="text" x="70" y="30"><field name="TEXT"></field></block></xml>';
 
 const customBlocks: any = {
-  cust2: {
+  cust: {
     json: {
       message0: "SIGA %1 VEZES",
       args0: [
