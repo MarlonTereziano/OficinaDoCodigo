@@ -57,8 +57,8 @@ export function Exercise1() {
       <TopBar />
       <ContentText>
         <button className="header" onClick={handleOpen}>
-          O que é programação em blocos?
-          {isOpen ? <BiCaretDown /> : <BiCaretRight />}
+          {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é programação em
+          blocos?
         </button>
         {isOpen ? <div>abriu</div> : <div>fechou</div>}
       </ContentText>
