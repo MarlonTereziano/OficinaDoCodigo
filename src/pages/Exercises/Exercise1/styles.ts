@@ -58,15 +58,42 @@ export const Container = styled.div`
 export const ContentText = styled.div`
   margin-top: 7.5vw;
   margin-left: 1vw;
-  width: 35vw;
+  padding-top: 0.8vw;
+  padding-left: 0.8vw;
+  padding-right: 0.8vw;
+  width: 30vw;
   height: 78vh;
   overflow: hidden;
   display: flex;
-  align-items: center;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 6%;
+    text-transform: uppercase;
+    font-family: MontserratExtraBold;
+    letter-spacing: 0.005vw;
+    font-size: 0.8rem;
+    background-color: #71c837;
+    border: none;
+    color: white;
+    svg{
+      width: 5%;
+      height: 100%;
+    }
+  }
+
+  .header:hover{
+    cursor: pointer;
+    filter: brightness(0.9);
+    transition: 0.5s;
+  }
 
   h1 {
     display: flex;
@@ -76,7 +103,7 @@ export const ContentText = styled.div`
 
 export const ContentGame = styled.div`
   margin-top: 7.5vw;
-  margin-right: 1vw;
+  margin-right: 4vw;
   width: 250px;
   height: 250px;
   display: flex;

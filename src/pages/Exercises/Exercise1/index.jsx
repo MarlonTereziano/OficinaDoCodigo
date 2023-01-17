@@ -12,12 +12,15 @@ import { TopBar } from "../../../components/topBar";
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
 
+import { BiCaretDown, BiCaretRight } from "react-icons/bi";
+
 export function Exercise1() {
   const [javascriptCode, setJavascriptCode] = useState("");
   const [countBlocks, setCountBlocks] = useState();
   const [countBlocks2, setCountBlocks2] = useState();
   const [aux, setAux] = useState(0);
   const [setXml] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   let alertVar = 0;
 
@@ -44,12 +47,20 @@ export function Exercise1() {
     console.log(countBlocks);
   }
 
+  const handleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <Container>
       <Header />
       <TopBar />
       <ContentText>
-        <h1>Explicações aqui Exercício 1</h1>
+        <button className="header" onClick={handleOpen}>
+          O que é programação em blocos?
+          {isOpen ? <BiCaretDown /> : <BiCaretRight />}
+        </button>
+        {isOpen ? <div>abriu</div> : <div>fechou</div>}
       </ContentText>
       <BlocklyWorkspace
         toolboxConfiguration={ConfigFiles.INITIAL_TOOLBOX_JSON}
