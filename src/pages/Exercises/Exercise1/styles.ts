@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import grade from "../../../assets/images/grade6x6.jpg";
 
-
 interface Props {
   move: any;
 }
@@ -40,7 +39,10 @@ export const Container = styled.div`
     background-color: red;
   } */
 
-  .blocklyToolboxContents .blocklyToolboxCategory .blocklyTreeRow .blocklyTreeRowContentContainer {
+  .blocklyToolboxContents
+    .blocklyToolboxCategory
+    .blocklyTreeRow
+    .blocklyTreeRowContentContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,19 +60,37 @@ export const Container = styled.div`
 export const ContentText = styled.div`
   margin-top: 7.5vw;
   margin-left: 1vw;
-  padding-top: 0.8vw;
-  padding-left: 0.8vw;
-  padding-right: 0.8vw;
+  padding: 0.8rem;
   width: 30vw;
   height: 78vh;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   flex-direction: column;
   align-items: flex-start;
 
-  .header{
+  h2::first-letter {
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: start;
+    color: var(--pink);
+    font-family: "MontserratExtraBold";
+    float: top;
+    margin-right: 0.1rem;
+    font-size: 2rem;
+  }
+
+  h2{
+    font-weight: normal;
+    font-size: 1.2rem;
+    text-align: justify;
+    overflow: auto;
+    text-transform: uppercase;
+  }
+
+  .header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,13 +103,15 @@ export const ContentText = styled.div`
     background-color: #71c837;
     border: none;
     color: white;
-    svg{
+    border-bottom: 1px solid;
+
+    svg {
       width: 5%;
       height: 100%;
     }
   }
 
-  .header:hover{
+  .header:hover {
     cursor: pointer;
     filter: brightness(0.9);
     transition: 0.5s;
@@ -125,11 +147,11 @@ export const ContentGame = styled.div`
     margin-top: -20rem;
   }
 
-  h1{
+  h1 {
     position: absolute;
   }
 
-  .bambu{
+  .bambu {
     position: absolute;
     margin-top: -13.8rem;
     margin-right: -13rem;

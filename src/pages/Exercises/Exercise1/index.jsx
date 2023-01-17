@@ -21,6 +21,7 @@ export function Exercise1() {
   const [aux, setAux] = useState(0);
   const [setXml] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenAtv, setIsOpenAtv] = useState(false);
 
   let alertVar = 0;
 
@@ -50,6 +51,9 @@ export function Exercise1() {
   const handleOpen = () => {
     setIsOpen(!isOpen);
   };
+  const handleOpenAtv = () => {
+    setIsOpenAtv(!isOpenAtv);
+  };
 
   return (
     <Container>
@@ -60,7 +64,45 @@ export function Exercise1() {
           {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é programação em
           blocos?
         </button>
-        {isOpen ? <div>abriu</div> : <div>fechou</div>}
+        {isOpen ? (
+          <h2>
+            Resumidamente uma linguagem de programação baseada em blocos
+            funciona como um quebra-cabeça, no qual cada peça é um comando e
+            quando montamos uma sequência de peças conseguimos escrever um
+            programa.
+          </h2>
+        ) : (
+          <></>
+        )}
+
+        <button className="header" onClick={handleOpenAtv}>
+          {isOpenAtv ? <BiCaretDown /> : <BiCaretRight />}
+          Descrição da Atividade
+        </button>
+        {isOpenAtv ? (
+          <h2>
+            Loren Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti in animi officia harum, provident et deserunt ducimus
+            accusantium similique hic nostrum dolorum dolor natus autem minus
+            mollitia! Quasi, sed culpa. Loren Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti in animi officia harum,
+            provident et deserunt ducimus accusantium similique hic nostrum
+            dolorum dolor natus autem minus mollitia! Quasi, sed culpa. Loren
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in
+            animi officia harum, provident et deserunt ducimus accusantium
+            similique hic nostrum dolorum dolor natus autem minus mollitia!
+            Quasi, sed culpa. Loren Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Deleniti in animi officia harum, provident et
+            deserunt ducimus accusantium similique hic nostrum dolorum dolor
+            natus autem minus mollitia! Quasi, sed culpa. Loren Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Deleniti in animi
+            officia harum, provident et deserunt ducimus accusantium similique
+            hic nostrum dolorum dolor natus autem minus mollitia! Quasi, sed
+            culpa.
+          </h2>
+        ) : (
+          <></>
+        )}
       </ContentText>
       <BlocklyWorkspace
         toolboxConfiguration={ConfigFiles.INITIAL_TOOLBOX_JSON}

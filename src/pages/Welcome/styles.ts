@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import Group from "../../assets/images/Group.png"
 
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: var(--black);
+  background: url(${Group});
+  background-size: auto;
   flex-direction: column;
 
   button{
