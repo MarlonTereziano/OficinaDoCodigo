@@ -13,13 +13,13 @@ const customBlocks: any = {
           name: "VALUE",
         },
       ],
-      nextStatement: null,
+      previousStatement: null,
       output: "VALUE",
       colour: "#0095d7",
       tooltip: "Returns number of letters in the provided text.",
       helpUrl: "http://www.w3schools.com/jsref/jsref_length_string.asp",
     },
-    code: "VALUE = 1"
+    code: "VALUE = 1",
   },
   cust3: {
     json: {
@@ -90,7 +90,21 @@ const INITIAL_TOOLBOX_JSON = {
           kind: "block",
           type: "math_number",
         },
-        
+        {
+          kind: "block",
+          blockxml:
+            '<block type="controls_repeat_ext">\n' +
+            '      <value name="TIMES">\n' +
+            '        <shadow type="math_number">\n' +
+            '          <field name="NUM">10</field>\n' +
+            "        </shadow>\n" +
+            "      </value>\n" +
+            "    </block>",
+        },
+        {
+          kind: "block",
+          type: "controls_repeat_ext",
+        },
       ],
     },
   ],

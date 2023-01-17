@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import BlocklyWorkspace from "./BlocklyWorkspace/index";
 import Blockly from "blockly";
+import br from 'blockly/msg/pt-br';
 import ConfigFiles from "./CustomBlocks/content";
 
 import { Container, ContentGame, ContentText, Panda } from "./styles";
@@ -11,6 +12,8 @@ import { TopBar } from "../../../components/topBar";
 
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
+
+Blockly.setLocale(br);
 
 export function Exercise2() {
   const [javascriptCode, setJavascriptCode] = useState("");
@@ -55,7 +58,7 @@ export function Exercise2() {
       />
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
-        <Panda src={panda} alt="panda" move={5 * javascriptCode + "rem"} />
+        <Panda src={panda} alt="panda" move={javascriptCode} />
         {console.log({ javascriptCode })}
         <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
