@@ -6,10 +6,10 @@ const INITIAL_XML =
 const customBlocks: any = {
   cust2: {
     json: {
-      message0: "SIGA %1 VEZES",
+      message0: "SIGA %1 ",
       args0: [
         {
-          type: "input_value",
+          type: "text_print",
           name: "VALUE",
         },
       ],
@@ -88,7 +88,11 @@ const INITIAL_TOOLBOX_JSON = {
         },
         {
           kind: "block",
-          type: "math_number",
+          blockxml:
+          '    <block type="text_print">\n' +
+          '      <value name="TEXT">\n' +
+          "      </value>\n" +
+          "    </block>\n",
         },
         {
           kind: "block",
