@@ -94,7 +94,7 @@ export default function App() {
         toolboxConfiguration={toolboxCategories}
         initialXml={initialXml}
         className="fill-height"
-        style={{ height: 'calc(100vh - 114px)' }}
+        style={{ height: '100vh' }}
         workspaceConfiguration={{
           grid: {
             spacing: 20,
