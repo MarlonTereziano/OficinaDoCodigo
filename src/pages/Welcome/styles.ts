@@ -7,7 +7,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   background: url(${Group});
-  background-size: auto;
+  background-size: cover;
   flex-direction: column;
 
   button{
