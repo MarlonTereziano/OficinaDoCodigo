@@ -65,11 +65,11 @@ export function Exercise1() {
           blocos?
         </button>
         {isOpen ? (
-          <h2>
-            Resumidamente uma linguagem de programação baseada em blocos
-            funciona como um quebra-cabeça, no qual cada peça é um comando e
-            quando montamos uma sequência de peças conseguimos escrever um
-            programa.
+          <h2 className="descriptionBLock">
+            Programação em blocos é um conjunto de instruções que se pode dar ao
+            computador para realizar inúmeras ativididades, como por exemplo,
+            mover personagens em um tabuleiro! "Blocks" é uma linguagem de
+            programação que permite criar animações, gráficos e jogos.
           </h2>
         ) : (
           <></>
@@ -80,26 +80,15 @@ export function Exercise1() {
           Descrição da Atividade
         </button>
         {isOpenAtv ? (
-          <h2>
-            Loren Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti in animi officia harum, provident et deserunt ducimus
-            accusantium similique hic nostrum dolorum dolor natus autem minus
-            mollitia! Quasi, sed culpa. Loren Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti in animi officia harum,
-            provident et deserunt ducimus accusantium similique hic nostrum
-            dolorum dolor natus autem minus mollitia! Quasi, sed culpa. Loren
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in
-            animi officia harum, provident et deserunt ducimus accusantium
-            similique hic nostrum dolorum dolor natus autem minus mollitia!
-            Quasi, sed culpa. Loren Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Deleniti in animi officia harum, provident et
-            deserunt ducimus accusantium similique hic nostrum dolorum dolor
-            natus autem minus mollitia! Quasi, sed culpa. Loren Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Deleniti in animi
-            officia harum, provident et deserunt ducimus accusantium similique
-            hic nostrum dolorum dolor natus autem minus mollitia! Quasi, sed
-            culpa.
-          </h2>
+          <>
+            <h2>
+              TABULEIRO DO PANDA NÍVEL 1 !
+            </h2>
+            <p>NESTE PRIMEIRO NÍVEL LEVAREMOS O PANDA AO SEU ALIMENTO (BAMBU)! </p>
+           <p> PARA ISSO, UTILIZAREMOS O BLOCO SIGA, QUE PODE SER ENCAIXADO MAIS DE
+            UMA VEZ EM SEGUIDA!
+            </p>
+          </>
         ) : (
           <></>
         )}

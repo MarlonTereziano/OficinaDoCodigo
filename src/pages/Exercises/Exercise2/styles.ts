@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import grade from "../../../assets/images/grade6x6.jpg";
 
-
 interface Props {
   move: any;
 }
@@ -40,7 +39,10 @@ export const Container = styled.div`
     background-color: red;
   } */
 
-  .blocklyToolboxContents .blocklyToolboxCategory .blocklyTreeRow .blocklyTreeRowContentContainer {
+  .blocklyToolboxContents
+    .blocklyToolboxCategory
+    .blocklyTreeRow
+    .blocklyTreeRowContentContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,15 +60,62 @@ export const Container = styled.div`
 export const ContentText = styled.div`
   margin-top: 7.5vw;
   margin-left: 1vw;
-  width: 35vw;
+  padding: 0.8rem;
+  width: 30vw;
   height: 78vh;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
-  align-items: center;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h2::first-letter {
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: start;
+    color: var(--pink);
+    font-family: "MontserratExtraBold";
+    float: top;
+    margin-right: 0.1rem;
+    font-size: 2rem;
+  }
+
+  h2{
+    font-weight: normal;
+    font-size: 1.2rem;
+    text-align: center;
+    overflow: auto;
+    text-transform: uppercase;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.7vw;
+    text-transform: uppercase;
+    font-family: MontserratExtraBold;
+    letter-spacing: 0.005vw;
+    font-size: 0.8rem;
+    background-color: #71c837;
+    border: none;
+    color: white;
+    border-bottom: 1px solid;
+
+    svg {
+      width: 5%;
+      height: 100%;
+    }
+  }
+
+  .header:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+    transition: 0.5s;
+  }
 
   h1 {
     display: flex;
@@ -76,7 +125,7 @@ export const ContentText = styled.div`
 
 export const ContentGame = styled.div`
   margin-top: 7.5vw;
-  margin-right: 1vw;
+  margin-right: 4vw;
   width: 250px;
   height: 250px;
   display: flex;
@@ -98,11 +147,11 @@ export const ContentGame = styled.div`
     margin-top: -20rem;
   }
 
-  h1{
+  h1 {
     position: absolute;
   }
 
-  .bambu{
+  .bambu {
     position: absolute;
     margin-top: -13.8rem;
     margin-right: -13rem;
