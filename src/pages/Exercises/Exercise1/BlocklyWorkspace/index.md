@@ -95,14 +95,14 @@ export default function App() {
         initialXml={initialXml}
         className="fill-height"
         style={{ height: 'calc(100vh - 114px)' }}
-        workspaceConfiguration={{
+        workspaceConfiguration={
           grid: {
             spacing: 20,
             length: 3,
             colour: "#CCCCCC",
             snap: true
           }
-        }}
+        }
         onWorkspaceChange={workspaceDidChange}
         onXmlChange={setXml}
       />
