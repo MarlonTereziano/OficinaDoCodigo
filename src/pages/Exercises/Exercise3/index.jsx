@@ -16,9 +16,6 @@ import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
 export function Exercise3() {
   const [javascriptCode, setJavascriptCode] = useState("");
-  const [countBlocks, setCountBlocks] = useState();
-  const [countBlocks2, setCountBlocks2] = useState();
-  const [aux, setAux] = useState(0);
   const [setXml] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenAtv, setIsOpenAtv] = useState(false);
@@ -37,15 +34,6 @@ export function Exercise3() {
         console.log("Esses blocos não encaixam!");
       }
     }
-    setCountBlocks(Blockly.mainWorkspace.getTopBlocks().length);
-    setCountBlocks2(Blockly.mainWorkspace.getAllBlocks().length);
-    if (countBlocks === 0 && countBlocks2 === 0) {
-      setAux(0);
-    } else {
-      setAux(countBlocks2 - countBlocks + 1);
-    }
-    console.log(aux);
-    console.log(countBlocks);
   }
 
   const handleOpen = () => {
