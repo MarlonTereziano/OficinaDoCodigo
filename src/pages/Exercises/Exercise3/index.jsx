@@ -14,7 +14,7 @@ import bambu from "../../../assets/images/bambu.png";
 
 import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
-export function Exercise2() {
+export function Exercise3() {
   const [javascriptCode, setJavascriptCode] = useState("");
   const [countBlocks, setCountBlocks] = useState();
   const [countBlocks2, setCountBlocks2] = useState();
