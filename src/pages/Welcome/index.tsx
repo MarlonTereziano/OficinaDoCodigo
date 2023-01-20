@@ -12,7 +12,7 @@ export const Welcome = () => {
       const textoArray = e.innerHTML.split("");
       e.innerHTML = "";
       textoArray.forEach((letra: any, i: any) => {
-        setTimeout(() => (e.innerHTML += letra), 150 * i);
+        setTimeout(() => (e.innerHTML += letra), 180 * i);
       });
     }
     const texto = document.querySelector("h1");
@@ -22,7 +22,7 @@ export const Welcome = () => {
   useEffect(() => {
     setTimeout(() => {
       setTest(<button onClick={()=>navigate("/ex1")}>Começar Agora!</button>);
-    }, 5500);
+    }, 6500);
   }, [navigate]);
 
   return (
