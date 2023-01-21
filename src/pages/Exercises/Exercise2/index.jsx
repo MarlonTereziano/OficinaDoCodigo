@@ -16,7 +16,6 @@ import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
 export function Exercise2() {
   const [javascriptCode, setJavascriptCode] = useState("");
-  const [aux, setAux] = useState(0);
   const [setXml] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenAtv, setIsOpenAtv] = useState(false);
@@ -35,9 +34,6 @@ export function Exercise2() {
         console.log("Esses blocos não encaixam!");
       }
     }
-
-    setAux(javascriptCode[28] * javascriptCode[44]);
-    console.log(aux);
   }
 
   const handleOpen = () => {
@@ -112,8 +108,8 @@ export function Exercise2() {
       />
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
-        <Panda src={panda} alt="panda" move={5 * aux + "rem"} />
-        <h1>{javascriptCode}</h1>
+        <Panda src={panda} alt="panda" move={5 * parseInt(javascriptCode) + "rem"} />
+        <h1>{parseInt(javascriptCode)}</h1>
         <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
     </Container>
