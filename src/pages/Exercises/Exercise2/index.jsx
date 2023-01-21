@@ -34,6 +34,7 @@ export function Exercise2() {
         console.log("Esses blocos não encaixam!");
       }
     }
+    
   }
 
   const handleOpen = () => {
