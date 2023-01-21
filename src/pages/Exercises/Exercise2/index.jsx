@@ -110,7 +110,6 @@ export function Exercise2() {
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
         <Panda src={panda} alt="panda" move={5 * parseInt(javascriptCode) + "rem"} />
-        <h1>{parseInt(javascriptCode)}</h1>
         <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
     </Container>

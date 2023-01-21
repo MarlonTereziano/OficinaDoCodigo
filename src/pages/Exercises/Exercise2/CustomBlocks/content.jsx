@@ -38,24 +38,6 @@ const INITIAL_TOOLBOX_JSON = {
         },
       ],
     },
-    {
-      kind: "category",
-      name: "LAÇOS",
-      colour: "#00d704",
-      contents: [
-        {
-          kind: "block",
-          blockxml:
-            '<block type="controls_repeat_ext">\n' +
-            '      <value name="TIMES">\n' +
-            '        <shadow type="math_number">\n' +
-            '          <field name="NUM">10</field>\n' +
-            "        </shadow>\n" +
-            "      </value>\n" +
-            "    </block>",
-        },
-      ],
-    },
   ],
 };
 
