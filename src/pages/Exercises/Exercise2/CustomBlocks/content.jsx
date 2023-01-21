@@ -41,77 +41,20 @@ Blockly.JavaScript["andar2"] = function (block) {
   return code;
 };
 
-//bloco loop
-Blockly.JavaScript['controls_repeat_ext'] = function(block) {
-  // This if/else statement figures out how many times the loop
-  // needs to repeat.
-  // If it is the top block in the picture above block.getField('TIMES')
-  // will return a field, otherwise it will return null and do the else statement.
-  if (block.getField('TIMES')) {
-    // This figures out what the number on the top block is, and
-    // converts it to a string to be used below.
-    var repeats = String(Number(block.getFieldValue('TIMES')));
-  } else {
-    // This figures out what the number on the bottom block is, and
-    // converts it to a string to be used below. For more info about
-    // valueToCode see link (1)
-    var repeats = Blockly.JavaScript.valueToCode(block, 'TIMES',
-        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
-  }
-
-
-  // This generates code for all of the blocks inside the repeat block.
-  // for more info about statementToCode see link (2)
-  var branch = Blockly.JavaScript.statementToCode(block, 'DO');
-
-
-  // This adds a check so that the generated code doesn't loop
-  // infinitely or for too long. For more info about this see link (3)
-  branch = Blockly.JavaScript.addLoopTrap(branch, block.id);
-
-
-  // This initialized the code variable.
-  var code = '';
- 
-  // This grabs a name for the variable inside the for(...) statement
-  // that won't collide with any user defined variables. For example
-  // if the user already defined a 'count' variable, this variable would
-  // be called something like 'count1'.
-  var loopVar = Blockly.JavaScript.variableDB_.getDistinctName(
-      'count', Blockly.Variables.VARIABLE_CATEGORY_NAME);
- 
-  // This runs if there is a block like image (4), where the input
-  // has other code inside of it. It makes sure that that code is
-  // evaluated before the loop starts.
-  var endVar = repeats;
-  if (!repeats.match(/^\w+$/) && !Blockly.isNumber(repeats)) {
-    // This grabs a name for the variable above the for(...) statement.
-    var endVar = Blockly.JavaScript.variableDB_.getDistinctName(
-        'repeat_end', Blockly.Variables.VARIABLE_CATEGORY_NAME);
-    // This adds the variable asignment before the for loop.
-    code += 'var ' + endVar + ' = ' + repeats + ';\n';
-  }
-
-
-  // This puts all the pieces together to form the gnerated code.
-  code += 'for (var ' + loopVar + ' = 0; ' +
-      loopVar + ' < ' + endVar + '; ' +
-      loopVar + '++) {\n' +
-      branch + '}\n';
-
-
-  // This returns the code so it can be added to other code strings or used.
-  return code;
-};
-
 // Bloco Matemática
 Blockly.Blocks["math_number"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(
-        new Blockly.FieldNumber(0, -Infinity, Infinity, 1),
+            .appendField(
+        new Blockly.FieldDropdown([
+          ["1", "1"],
+          ["2", "2"],
+          ["3", "3"],
+          ["4", "4"],
+          ["5", "5"],
+        ]),
         "NUM"
-      );
+      )
     this.setOutput(true, null);
     this.setColour("#d700d0");
     this.setTooltip("");
@@ -136,7 +79,7 @@ const INITIAL_TOOLBOX_JSON = {
     },
     {
       kind: "category",
-      name: "LAÇOS",
+      name: "LAÇO",
       colour: "#00d704",
       contents: [
         {
