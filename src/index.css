@@ -25,8 +25,12 @@
   font-family: Montserrat, AGENCYR, MontserratExtraBold,
     "Roboto", Arial, Helvetica, sans-serif;
   text-decoration: none;
-
-  
 }
 
 
+.blocklyText {
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-size: 12.5px !important;
+}

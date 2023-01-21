@@ -37,7 +37,7 @@ Blockly.Blocks["andar2"] = {
 Blockly.JavaScript["andar2"] = function (block) {
   var dropdown_abrir = block.getFieldValue("dropAndar2");
   // TODO: Assemble JavaScript into code variable.
-  var code = "var testing" +"="+dropdown_abrir;
+  var code = dropdown_abrir;
   return code;
 };
 
@@ -104,6 +104,22 @@ Blockly.JavaScript['controls_repeat_ext'] = function(block) {
   return code;
 };
 
+// Bloco Matemática
+Blockly.Blocks["math_number"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(
+        new Blockly.FieldNumber(0, -Infinity, Infinity, 1),
+        "NUM"
+      );
+    this.setOutput(true, null);
+    this.setColour("#d700d0");
+    this.setTooltip("");
+    this.setHelpUrl("");
+  },
+};
+
+
 const INITIAL_TOOLBOX_JSON = {
   kind: "categoryToolbox",
   contents: [
@@ -127,6 +143,10 @@ const INITIAL_TOOLBOX_JSON = {
           kind: "block",
           type: "controls_repeat_ext",
         },
+        {
+          kind: "block",
+          type: "math_number"
+        }
       ],
     },
   ],

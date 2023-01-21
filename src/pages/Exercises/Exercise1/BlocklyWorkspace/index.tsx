@@ -1,6 +1,9 @@
 import React, { CSSProperties, FC } from 'react';
 import Blockly from 'blockly';
+import language from 'blockly/msg/pt-br';
 import useBlocklyWorkspace from './useBlockly';
+
+Blockly.setLocale(language);
 
 export interface CustomBlock {
   json: Object

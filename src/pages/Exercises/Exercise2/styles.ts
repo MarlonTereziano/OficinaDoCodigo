@@ -78,16 +78,38 @@ export const ContentText = styled.div`
     color: var(--pink);
     font-family: "MontserratExtraBold";
     float: top;
-    margin-right: 0.1rem;
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-right: -0.3rem;
   }
 
-  h2{
-    font-weight: normal;
+  .descriptionBLock {
+    font-family: AGENCYR;
+    font-weight: bold;
     font-size: 1.2rem;
-    text-align: center;
+    padding: 1rem;
+    padding-top: 0rem;
+    letter-spacing: 1.5px;
+    text-align: JUSTIFY;
     overflow: auto;
     text-transform: uppercase;
+  }
+
+  h2 {
+    text-indent: 1.5rem;
+    font-family: AGENCYR;
+    font-weight: bold;
+    padding: 1rem;
+  }
+
+  p {
+    font-family: AGENCYR;
+    letter-spacing: 1.5px;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-indent: 1.5rem;
+    font-size: 1.2rem;
+    text-align: justify;
   }
 
   .header {

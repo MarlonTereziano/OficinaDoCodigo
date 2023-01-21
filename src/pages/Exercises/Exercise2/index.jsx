@@ -36,7 +36,8 @@ export function Exercise2() {
       }
     }
 
-    // alert(javascriptCode.paseInt());
+    setAux(javascriptCode[28] * javascriptCode[44]);
+    console.log(aux);
   }
 
   const handleOpen = () => {
@@ -111,8 +112,8 @@ export function Exercise2() {
       />
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
-        <Panda src={panda} alt="panda" move={5 * javascriptCode + "rem"} />
-        <h1>{javascriptCode}</h1>
+        <Panda src={panda} alt="panda" move={5 * aux + "rem"} />
+        {/* <h1>{javascriptCode}</h1> */}
         <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
     </Container>
