@@ -8,17 +8,8 @@ Blockly.Blocks["andar2"] = {
   init: function () {
     this.appendDummyInput()
       .appendField("SIGA")
-      .appendField(
-        new Blockly.FieldDropdown([
-          ["1", "1"],
-          ["2", "2"],
-          ["3", "3"],
-          ["4", "4"],
-          ["5", "5"],
-        ]),
-        "dropAndar2"
-      )
-      .appendField("VEZ(ES)")
+      .appendField(new Blockly.FieldDropdown([["1", "1"]]), "dropAndar2")
+      .appendField("VEZ")
       .appendField(
         new Blockly.FieldImage(
           "https://cdn-icons-png.flaticon.com/512/61/61100.png",
@@ -41,11 +32,11 @@ Blockly.JavaScript["andar2"] = function (block) {
   return code;
 };
 
-// Bloco Matemática
-Blockly.Blocks["math_number"] = {
+Blockly.Blocks["controls_repeat_ext"] = {
   init: function () {
     this.appendDummyInput()
-            .appendField(
+      .appendField("REPETIR")
+      .appendField(
         new Blockly.FieldDropdown([
           ["1", "1"],
           ["2", "2"],
@@ -55,28 +46,52 @@ Blockly.Blocks["math_number"] = {
         ]),
         "NUM"
       )
-    this.setOutput(true, null);
-    this.setColour("#d700d0");
+      .appendField("VEZES");
+    this.appendStatementInput("DO").setCheck(null).appendField("FAÇA");
+    this.setPreviousStatement(false, null);
+    this.setNextStatement(false, null);
+    this.setColour("#00d704");
     this.setTooltip("");
     this.setHelpUrl("");
   },
 };
 
+Blockly.JavaScript["controls_repeat_ext"] = function (block) {
+  var repeats = Number(block.getFieldValue("NUM"));
+  var branch = Blockly.JavaScript.statementToCode(block, "DO");
+  branch =
+    Blockly.JavaScript.addLoopTrap(branch, block.id) || Blockly.JavaScript.PASS;
+  var code = "";
+  var loopVar = Blockly.JavaScript.variableDB_.getDistinctName(
+    "count",
+    Blockly.VARIABLE_CATEGORY_NAME
+  );
+  var endVar = repeats;
+  if (!repeats) {
+    return "";
+  }
+  if (repeats < 0) {
+    repeats *= -1;
+    branch = "if (" + loopVar + " % 2 == 1) {\n" + branch + "}\n";
+  }
+  code +=
+    "for (var " +
+    loopVar +
+    " = 0; " +
+    loopVar +
+    " < " +
+    endVar +
+    "; " +
+    loopVar +
+    "++) {\n" +
+    branch +
+    "}\n";
+  return code;
+};
 
 const INITIAL_TOOLBOX_JSON = {
   kind: "categoryToolbox",
   contents: [
-    {
-      kind: "category",
-      name: "DIREÇÃO",
-      colour: "#0095d7",
-      contents: [
-        {
-          kind: "block",
-          type: "andar2",
-        },
-      ],
-    },
     {
       kind: "category",
       name: "LAÇO",
@@ -86,10 +101,17 @@ const INITIAL_TOOLBOX_JSON = {
           kind: "block",
           type: "controls_repeat_ext",
         },
+      ],
+    },
+    {
+      kind: "category",
+      name: "DIREÇÃO",
+      colour: "#0095d7",
+      contents: [
         {
           kind: "block",
-          type: "math_number"
-        }
+          type: "andar2",
+        },
       ],
     },
   ],
