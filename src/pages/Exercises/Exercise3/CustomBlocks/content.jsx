@@ -32,7 +32,7 @@ Blockly.JavaScript["andar2"] = function (block) {
   return code;
 };
 
-Blockly.Blocks["controls_repeat_ext"] = {
+Blockly.Blocks["controls_repeat_ext2"] = {
   init: function () {
     this.appendDummyInput()
       .appendField("REPETIR")
@@ -56,7 +56,7 @@ Blockly.Blocks["controls_repeat_ext"] = {
   },
 };
 
-Blockly.JavaScript["controls_repeat_ext"] = function (block) {
+Blockly.JavaScript["controls_repeat_ext2"] = function (block) {
   var repeats = Number(block.getFieldValue("NUM"));
   var branch = Blockly.JavaScript.statementToCode(block, "DO");
   branch =
@@ -99,7 +99,7 @@ const INITIAL_TOOLBOX_JSON = {
       contents: [
         {
           kind: "block",
-          type: "controls_repeat_ext",
+          type: "controls_repeat_ext2",
         },
       ],
     },

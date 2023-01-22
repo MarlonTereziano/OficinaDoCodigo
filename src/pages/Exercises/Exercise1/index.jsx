@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-import BlocklyWorkspace from "./BlocklyWorkspace/index";
+import BlocklyWorkspace from "../../../components/BlocklyWorkspace/index";
 import Blockly from "blockly";
+import language from "blockly/msg/pt-br";
 import ConfigFiles from "./CustomBlocks/content";
 
 import { Container, ContentGame, ContentText, Panda } from "./styles";
@@ -13,6 +14,8 @@ import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
 
 import { BiCaretDown, BiCaretRight } from "react-icons/bi";
+
+Blockly.setLocale(language);
 
 export function Exercise1() {
   const [javascriptCode, setJavascriptCode] = useState("");
@@ -81,12 +84,14 @@ export function Exercise1() {
         </button>
         {isOpenAtv ? (
           <>
-            <h2>
-              TABULEIRO DO PANDA NÍVEL 1 !
-            </h2>
-            <p>NESTE PRIMEIRO NÍVEL LEVAREMOS O PANDA AO SEU ALIMENTO (BAMBU)! </p>
-           <p> PARA ISSO, UTILIZAREMOS O BLOCO SIGA, QUE PODE SER ENCAIXADO MAIS DE
-            UMA VEZ EM SEGUIDA!
+            <h2>TABULEIRO DO PANDA NÍVEL 1 !</h2>
+            <p>
+              NESTE PRIMEIRO NÍVEL LEVAREMOS O PANDA AO SEU ALIMENTO (BAMBU)!{" "}
+            </p>
+            <p>
+              {" "}
+              PARA ISSO, UTILIZAREMOS O BLOCO SIGA, QUE PODE SER ENCAIXADO MAIS
+              DE UMA VEZ EM SEGUIDA!
             </p>
           </>
         ) : (

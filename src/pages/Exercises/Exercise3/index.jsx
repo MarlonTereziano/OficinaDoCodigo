@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import BlocklyWorkspace from "./BlocklyWorkspace/index";
+import BlocklyWorkspace from "../../../components/BlocklyWorkspace/index";
 import Blockly from "blockly";
 import ConfigFiles from "./CustomBlocks/content";
 
