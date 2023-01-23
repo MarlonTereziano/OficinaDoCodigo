@@ -43,10 +43,11 @@ Blockly.Blocks["controls_repeat_ext2"] = {
           ["3", "3"],
           ["4", "4"],
           ["5", "5"],
+          ["6", "6"],
         ]),
         "NUM"
       )
-      .appendField("VEZES");
+      .appendField("VEZ(ES)");
     this.appendStatementInput("DO").setCheck(null).appendField("FAÇA");
     this.setPreviousStatement(false, null);
     this.setNextStatement(false, null);

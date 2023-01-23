@@ -84,7 +84,7 @@ export const ContentText = styled.div`
     font-family: "MontserratExtraBold";
     float: top;
     font-size: 3rem;
-    margin-right: -0.3rem;
+    margin-right: 0rem;
   }
 
   .descriptionBLock {
@@ -99,22 +99,31 @@ export const ContentText = styled.div`
     text-transform: uppercase;
   }
 
-  h2 {
+  h2{
     text-indent: 1.5rem;
     font-family: AGENCYR;
     font-weight: bold;
     padding: 1rem;
   }
 
-  p {
+  p{
     font-family: AGENCYR;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     padding: 1rem;
     padding-top: 0;
     padding-bottom: 0;
-    text-indent: 1.5rem;
+    text-indent: 2rem;
     font-size: 1.2rem;
     text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img{
+      margin-top: 1rem;
+      width: 100%;
+    }
   }
 
   .header {

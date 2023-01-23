@@ -13,6 +13,7 @@ import { DropDown } from "../../../components/DropDown";
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
 import atv2 from "../../../assets/images/Prints/atv2.png";
+import menu from "../../../assets/images/Prints/menu.png";
 
 import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
@@ -52,16 +53,20 @@ export function Exercise2() {
       {javascriptCode === "5" ? <DropDown page="/ex3" /> : <></>}
       <ContentText>
         <button className="header" onClick={handleOpen}>
-          {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é programação em
-          blocos?
+          {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é menu suspenso?
         </button>
         {isOpen ? (
-          <h2 className="descriptionBLock">
-            Programação em blocos é um conjunto de instruções que se pode dar ao
-            computador para realizar inúmeras ativididades, como por exemplo,
-            mover personagens em um tabuleiro! "Blocks" é uma linguagem de
-            programação que permite criar animações, gráficos e jogos.
-          </h2>
+          <>
+            <h2 className="descriptionBLock">
+              Menu suspenso consiste em um menu em que suas opções são ocultas
+              até que um clique seja acionado, ou seja, várias sub-opções de uma
+              opção num menu. E, por incrível que pareça, é algo extremamente
+              simples de ser feito!
+              <p>
+                <img src={menu} alt="" />
+              </p>
+            </h2>
+          </>
         ) : (
           <></>
         )}

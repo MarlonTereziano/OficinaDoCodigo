@@ -104,6 +104,9 @@ export const ContentText = styled.div`
     font-family: AGENCYR;
     font-weight: bold;
     padding: 1rem;
+    p img{
+      width: 60%;
+    }
   }
 
   p{

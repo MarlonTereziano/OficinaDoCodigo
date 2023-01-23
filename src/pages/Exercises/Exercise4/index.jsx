@@ -12,6 +12,7 @@ import { DropDown } from "../../../components/DropDown";
 
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
+import atv4 from "../../../assets/images/Prints/atv4.png";
 
 import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
@@ -51,48 +52,36 @@ export function Exercise4() {
     <Container>
       <Header />
       <TopBar />
-      {aux === 5 ? (<DropDown page="/ex5"/>):(<></>)}
+      {aux === 5 ? <DropDown page="/ex5" /> : <></>}
       <ContentText>
-        <button className="header" onClick={handleOpen}>
-          {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é programação em
-          blocos?
-        </button>
-        {isOpen ? (
-          <h2>
-            Resumidamente uma linguagem de programação baseada em blocos
-            funciona como um quebra-cabeça, no qual cada peça é um comando e
-            quando montamos uma sequência de peças conseguimos escrever um
-            programa.
-          </h2>
-        ) : (
-          <></>
-        )}
-
         <button className="header" onClick={handleOpenAtv}>
           {isOpenAtv ? <BiCaretDown /> : <BiCaretRight />}
           Descrição da Atividade
         </button>
         {isOpenAtv ? (
-          <h2>
-            Loren Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti in animi officia harum, provident et deserunt ducimus
-            accusantium similique hic nostrum dolorum dolor natus autem minus
-            mollitia! Quasi, sed culpa. Loren Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti in animi officia harum,
-            provident et deserunt ducimus accusantium similique hic nostrum
-            dolorum dolor natus autem minus mollitia! Quasi, sed culpa. Loren
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in
-            animi officia harum, provident et deserunt ducimus accusantium
-            similique hic nostrum dolorum dolor natus autem minus mollitia!
-            Quasi, sed culpa. Loren Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Deleniti in animi officia harum, provident et
-            deserunt ducimus accusantium similique hic nostrum dolorum dolor
-            natus autem minus mollitia! Quasi, sed culpa. Loren Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Deleniti in animi
-            officia harum, provident et deserunt ducimus accusantium similique
-            hic nostrum dolorum dolor natus autem minus mollitia! Quasi, sed
-            culpa.
-          </h2>
+          <>
+            <h2>TABULEIRO DO PANDA NÍVEL 4!</h2>
+            <p>
+              NO QUARTO NÍVEL LEVAREMOS O PANDA AO SEU ALIMENTO COM A AJUDA DE
+              LAÇOS E NÚMEROS SEPARADOS!{" "}
+            </p>
+            <p>
+              {" "}
+              NESSA ATIVIDADE, UTILIZAREMOS O BLOCO "REPETIR", E DENTRO DELE O
+              BLOCO "SIGA", COMO NA ATIVIDADE ANTERIOR. PORÉM, DESSA VEZ
+              ADICIONAREMOS O BLOCO NÚMERO DENTRO DO LAÇO, QUE PERMITE ADICIONAR
+              QUALQUER VALOR DIGITADO PELO TECLADO{" "}
+            </p>
+            <p>
+              <img src={atv4} alt="" />
+              <br />
+            </p>
+            <p>
+              PARA SELECIONAR A QUANTIDADE DE PASSOS, BASTA CLICAR DENTRO DO
+              BLOCO NÚMERO (APÓS ADICIONÁ-LO DENTRO DO LOOP), E DIGITAR O NÚMERO DE VEZES QUE DESEJA ANDAR.
+              ASSIM, O PANDA COMEÇA A SE MOVIMENTAR!
+            </p>
+          </>
         ) : (
           <></>
         )}

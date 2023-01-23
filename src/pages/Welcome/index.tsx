@@ -29,7 +29,7 @@ export const Welcome = () => {
     <Container>
       <img src={logoIF} alt="logoIF" />
       <Content>
-        <h1>Bem-vindos à oficina do código!</h1>
+        <h1>Bem-vindo(a) à oficina do código!</h1>
         <span>{test}</span>
       </Content>
     </Container>

@@ -12,6 +12,8 @@ import { DropDown } from "../../../components/DropDown";
 
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
+import atv3 from "../../../assets/images/Prints/atv3.png";
+import laço from "../../../assets/images/Prints/laço.png";
 
 import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
@@ -52,18 +54,22 @@ export function Exercise3() {
     <Container>
       <Header />
       <TopBar />
-      {aux === 5 ? (<DropDown page="/ex4"/>):(<></>)}
+      {aux === 5 ? <DropDown page="/ex4" /> : <></>}
       <ContentText>
         <button className="header" onClick={handleOpen}>
-          {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é programação em
-          blocos?
+          {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que são blocos com
+          laço?
         </button>
         {isOpen ? (
-          <h2>
-            Resumidamente uma linguagem de programação baseada em blocos
-            funciona como um quebra-cabeça, no qual cada peça é um comando e
-            quando montamos uma sequência de peças conseguimos escrever um
-            programa.
+          <h2 className="descriptionBLock">
+            Laço de Repetição, ou loop, é uma estrutura de programação que
+            repete uma sequência de instruções até que uma condição específica
+            seja atendida. Os programadores usam loops para percorrer os
+            valores, adicionar somas de números, repetir funções e muitas outras
+            coisas.
+            <p>
+              <img src={laço} alt="" />
+            </p>
           </h2>
         ) : (
           <></>
@@ -74,26 +80,27 @@ export function Exercise3() {
           Descrição da Atividade
         </button>
         {isOpenAtv ? (
-          <h2>
-            Loren Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti in animi officia harum, provident et deserunt ducimus
-            accusantium similique hic nostrum dolorum dolor natus autem minus
-            mollitia! Quasi, sed culpa. Loren Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti in animi officia harum,
-            provident et deserunt ducimus accusantium similique hic nostrum
-            dolorum dolor natus autem minus mollitia! Quasi, sed culpa. Loren
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in
-            animi officia harum, provident et deserunt ducimus accusantium
-            similique hic nostrum dolorum dolor natus autem minus mollitia!
-            Quasi, sed culpa. Loren Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Deleniti in animi officia harum, provident et
-            deserunt ducimus accusantium similique hic nostrum dolorum dolor
-            natus autem minus mollitia! Quasi, sed culpa. Loren Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Deleniti in animi
-            officia harum, provident et deserunt ducimus accusantium similique
-            hic nostrum dolorum dolor natus autem minus mollitia! Quasi, sed
-            culpa.
-          </h2>
+          <>
+            <h2>TABULEIRO DO PANDA NÍVEL 3!</h2>
+            <p>
+              NO TERCEIRO NÍVEL LEVAREMOS O PANDA AO SEU ALIMENTO COM A AJUDA DE
+              LAÇOS!{" "}
+            </p>
+            <p>
+              {" "}
+              NESSA ATIVIDADE, UTILIZAREMOS O NOVO BLOCO "REPETIR", E DENTRO
+              DELE COLOCAREMOS O BLOCO JÁ CONHECIDO "SIGA".{" "}
+            </p>
+            <p>
+              <img src={atv3} alt="" />
+              <br />
+            </p>
+            <p>
+              PARA SELECIONAR A QUANTIDADE DE PASSOS, BASTA ARRASTAR O BLOCO
+              SIGA DENTRO DO BLOCO REPETIR, E CLICAR NO NÚMERO MOSTRADO DENTRO
+              DO BLOCO REPETIR. ASSIM, O PANDA COMEÇA A SE MOVIMENTAR!
+            </p>
+          </>
         ) : (
           <></>
         )}
