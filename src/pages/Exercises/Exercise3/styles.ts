@@ -57,7 +57,7 @@ export const Container = styled.div`
     z-index: 1;
   }
 
-  .blocklyMainWorkspaceScrollbar{
+  .blocklyMainWorkspaceScrollbar {
     z-index: 1;
   }
 `;
@@ -99,14 +99,14 @@ export const ContentText = styled.div`
     text-transform: uppercase;
   }
 
-  h2{
+  h2 {
     text-indent: 1.5rem;
     font-family: AGENCYR;
     font-weight: bold;
     padding: 1rem;
   }
 
-  p{
+  p {
     font-family: AGENCYR;
     letter-spacing: 1px;
     padding: 1rem;
@@ -120,7 +120,7 @@ export const ContentText = styled.div`
     justify-content: center;
     flex-direction: column;
 
-    img{
+    img {
       margin-top: 1rem;
       width: 100%;
     }
@@ -130,8 +130,10 @@ export const ContentText = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 2.7vw;
+    width: 28vw;
+    height: 2.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-transform: uppercase;
     font-family: MontserratExtraBold;
     letter-spacing: 0.005vw;
@@ -142,8 +144,8 @@ export const ContentText = styled.div`
     border-bottom: 1px solid;
 
     svg {
-      width: 5%;
-      height: 100%;
+      width: 10%;
+      height: 400%;
     }
   }
 

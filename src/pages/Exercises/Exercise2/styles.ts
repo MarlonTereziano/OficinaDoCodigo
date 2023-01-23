@@ -64,7 +64,7 @@ export const Container = styled.div`
 
 export const ContentText = styled.div`
   margin-top: 7.5vw;
-  margin-left: 1vw;
+  margin-left: 0.7vw;
   padding: 0.8rem;
   width: 30vw;
   height: 78vh;
@@ -84,7 +84,6 @@ export const ContentText = styled.div`
     font-family: "MontserratExtraBold";
     float: top;
     font-size: 3rem;
-    margin-right: -0.3rem;
   }
 
   .descriptionBLock {
@@ -133,8 +132,10 @@ export const ContentText = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 2.7vw;
+    width: 28vw;
+    height: 2.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-transform: uppercase;
     font-family: MontserratExtraBold;
     letter-spacing: 0.005vw;
@@ -145,8 +146,8 @@ export const ContentText = styled.div`
     border-bottom: 1px solid;
 
     svg {
-      width: 5%;
-      height: 100%;
+      width: 10%;
+      height: 400%;
     }
   }
 

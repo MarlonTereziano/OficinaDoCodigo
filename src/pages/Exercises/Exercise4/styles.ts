@@ -130,8 +130,10 @@ export const ContentText = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 2.7vw;
+    width: 28vw;
+    height: 2.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-transform: uppercase;
     font-family: MontserratExtraBold;
     letter-spacing: 0.005vw;
@@ -142,8 +144,8 @@ export const ContentText = styled.div`
     border-bottom: 1px solid;
 
     svg {
-      width: 5%;
-      height: 100%;
+      width: 10%;
+      height: 400%;
     }
   }
 
