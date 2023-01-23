@@ -63,10 +63,9 @@ export function Exercise3() {
         {isOpen ? (
           <h2 className="descriptionBLock">
             Laço de Repetição, ou loop, é uma estrutura de programação que
-            repete uma sequência de instruções até que uma condição específica
-            seja atendida. Os programadores usam loops para percorrer os
-            valores, adicionar somas de números, repetir funções e muitas outras
-            coisas.
+            repete uma sequência de instruções com uma condição específica. Os
+            programadores usam loops para percorrer os valores, adicionar somas
+            de números, repetir funções e muitas outras coisas.
             <p>
               <img src={laço} alt="" />
             </p>

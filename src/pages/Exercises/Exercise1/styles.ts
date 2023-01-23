@@ -84,7 +84,6 @@ export const ContentText = styled.div`
     font-family: "MontserratExtraBold";
     float: top;
     font-size: 3rem;
-    margin-right: -0.3rem;
   }
 
   .descriptionBLock {
