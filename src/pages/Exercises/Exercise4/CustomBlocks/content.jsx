@@ -8,7 +8,7 @@ const customBlocks = {
   cust: {
     json: {
       type: "block_type",
-      message0: "Repita %1 Vezes %2 Enquanto %3",
+      message0: "Repita %1 Vezes %2 Faça %3",
       args0: [
         {
           type: "input_value",
@@ -22,12 +22,10 @@ const customBlocks = {
           name: "DO",
         },
       ],
-      colour: 230,
+      colour: "#d700a5",
       tooltip: "",
       helpUrl: "",
-      output: "NUM",
     },
-    code: "1"
   },
 };
 
@@ -35,13 +33,27 @@ Object.keys(customBlocks).map((key) =>
   blockRegistry(key, customBlocks[key].json, customBlocks[key].code)
 );
 
+// Bloco Math
+Blockly.Blocks["math_number"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(
+        new Blockly.FieldNumber(0, 0, 100, 1),
+        "NUM"
+      );
+    this.setOutput(true, null);
+    this.setColour("#d7c500");
+    this.setTooltip("");
+    this.setHelpUrl("");
+  },
+};
+
+
 //Bloco Andar
 Blockly.Blocks["andar3"] = {
   init: function () {
     this.appendDummyInput()
       .appendField("SIGA")
-      .appendField(new Blockly.FieldDropdown([["1", "1"]]), "dropAndar3")
-      .appendField("VEZ")
       .appendField(
         new Blockly.FieldImage(
           "https://cdn-icons-png.flaticon.com/512/61/61100.png",
@@ -57,61 +69,24 @@ Blockly.Blocks["andar3"] = {
     this.setHelpUrl("");
   },
 };
-Blockly.JavaScript["andar3"] = function (block) {
-  var dropdown_abrir = block.getFieldValue("dropAndar3");
-  // TODO: Assemble JavaScript into code variable.
-  var code = dropdown_abrir;
+Blockly.JavaScript["andar3"] = function () {
+  return "1";
+};
+
+Blockly.JavaScript["cust"] = function (block) {
+  var aux = Blockly.JavaScript.valueToCode(
+    block,
+    "NUM",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
+  var aux2 = Blockly.JavaScript.statementToCode(block, "DO");
+  var teste = "for (var count = 0; count < " + aux + "; count++) {" + aux2 + "}";
+
+  console.log(aux2);
+  var code = teste;
   return code;
 };
 
-// Blockly.Blocks["controls_repeat_ext"] = {
-//   init: function () {
-//     this.appendDummyInput()
-//       .appendField("REPETIR")
-//       .appendField(new Blockly.FieldNumber(0, 0, 5), "NUM")
-//       .appendField("VEZES");
-//     this.appendStatementInput("DO").setCheck(null).appendField("FAÇA");
-//     this.setPreviousStatement(false, null);
-//     this.setNextStatement(false, null);
-//     this.setColour("#00d704");
-//     this.setTooltip("");
-//     this.setHelpUrl("");
-//   },
-// };
-
-// Blockly.JavaScript["cust"] = function (block) {
-//   var repeats = Number(block.getFieldValue("NUM"));
-//   var branch = Blockly.JavaScript.statementToCode(block, "DO");
-//   branch =
-//     Blockly.JavaScript.addLoopTrap(branch, block.id) || Blockly.JavaScript.PASS;
-//   var code = "";
-//   var loopVar = Blockly.JavaScript.variableDB_.getDistinctName(
-//     "count",
-//     Blockly.VARIABLE_CATEGORY_NAME
-//   );
-//   var endVar = repeats;
-//   if (!repeats) {
-//     return "";
-//   }
-//   if (repeats < 0) {
-//     repeats *= -1;
-//     branch = "if (" + loopVar + " % 2 == 1) {\n" + branch + "}\n";
-//   }
-//   code +=
-//     "for (var " +
-//     loopVar +
-//     " = 0; " +
-//     loopVar +
-//     " < " +
-//     endVar +
-//     "; " +
-//     loopVar +
-//     "++) {\n" +
-//     branch +
-//     "}\n";
-    
-//   return code;
-// };
 
 const INITIAL_TOOLBOX_JSON = {
   kind: "categoryToolbox",
@@ -125,10 +100,6 @@ const INITIAL_TOOLBOX_JSON = {
           kind: "block",
           type: "cust",
         },
-        {
-          kind: "block",
-          type: "math_number",
-        }
       ],
     },
     {
@@ -142,6 +113,17 @@ const INITIAL_TOOLBOX_JSON = {
         },
       ],
     },
+    {
+      kind: "category",
+      name: "NÚMEROS",
+      colour: "#d700a5",
+      contents: [
+        {
+          kind: "block",
+          type: "math_number",
+        }
+      ],
+    }
   ],
 };
 

@@ -36,8 +36,7 @@ export function Exercise4() {
       }
     }
 
-    setAux(javascriptCode[28] * javascriptCode[44]);
-    console.log(aux);
+    setAux(javascriptCode[28] * javascriptCode[43]);
   }
 
   const handleOpen = () => {
@@ -113,7 +112,6 @@ export function Exercise4() {
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
         <Panda src={panda} alt="panda" move={5 * aux + "rem"} />
-        <h1>{javascriptCode}</h1>
         <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
     </Container>
