@@ -38,7 +38,7 @@ Blockly.Blocks["math_number"] = {
   init: function () {
     this.appendDummyInput()
       .appendField(
-        new Blockly.FieldNumber(0, 0, 5),
+        new Blockly.FieldNumber(0, 0, 100, 1),
         "NUM"
       );
     this.setOutput(true, null);

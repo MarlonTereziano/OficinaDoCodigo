@@ -54,7 +54,14 @@ export const Container = styled.div`
     background-color: white;
     width: 6rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 1;
   }
+
+  .blocklyMainWorkspaceScrollbar{
+    z-index: 1;
+  }
+
+  
 `;
 
 export const ContentText = styled.div`

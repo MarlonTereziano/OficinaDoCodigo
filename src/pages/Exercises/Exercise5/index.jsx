@@ -8,14 +8,13 @@ import { Container, ContentGame, ContentText, Panda } from "./styles";
 
 import { Header } from "../../../components/header";
 import { TopBar } from "../../../components/topBar";
-import { DropDown } from "../../../components/DropDown";
 
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
 
 import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
-export function Exercise4() {
+export function Exercise5() {
   const [javascriptCode, setJavascriptCode] = useState("");
   const [aux, setAux] = useState(0);
   const [setXml] = useState("");
@@ -51,7 +50,6 @@ export function Exercise4() {
     <Container>
       <Header />
       <TopBar />
-      {aux === 5 ? (<DropDown page="/ex5"/>):(<></>)}
       <ContentText>
         <button className="header" onClick={handleOpen}>
           {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é programação em

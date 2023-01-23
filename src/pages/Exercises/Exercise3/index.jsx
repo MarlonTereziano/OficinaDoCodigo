@@ -8,6 +8,7 @@ import { Container, ContentGame, ContentText, Panda } from "./styles";
 
 import { Header } from "../../../components/header";
 import { TopBar } from "../../../components/topBar";
+import { DropDown } from "../../../components/DropDown";
 
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
@@ -51,6 +52,7 @@ export function Exercise3() {
     <Container>
       <Header />
       <TopBar />
+      {aux === 5 ? (<DropDown page="/ex4"/>):(<></>)}
       <ContentText>
         <button className="header" onClick={handleOpen}>
           {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é programação em
