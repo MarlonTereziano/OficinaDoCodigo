@@ -20,7 +20,6 @@ export function Exercise4() {
   const [javascriptCode, setJavascriptCode] = useState("");
   const [aux, setAux] = useState(0);
   const [setXml] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
   const [isOpenAtv, setIsOpenAtv] = useState(false);
 
   let alertVar = 0;
@@ -41,9 +40,6 @@ export function Exercise4() {
     setAux(javascriptCode[28] * javascriptCode[43]);
   }
 
-  const handleOpen = () => {
-    setIsOpen(!isOpen);
-  };
   const handleOpenAtv = () => {
     setIsOpenAtv(!isOpenAtv);
   };
