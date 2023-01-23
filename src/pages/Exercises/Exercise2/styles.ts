@@ -60,8 +60,6 @@ export const Container = styled.div`
   .blocklyMainWorkspaceScrollbar{
     z-index: 1;
   }
-
-  
 `;
 
 export const ContentText = styled.div`
@@ -85,16 +83,47 @@ export const ContentText = styled.div`
     color: var(--pink);
     font-family: "MontserratExtraBold";
     float: top;
-    margin-right: 0.1rem;
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-right: -0.3rem;
+  }
+
+  .descriptionBLock {
+    font-family: AGENCYR;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem;
+    padding-top: 0rem;
+    letter-spacing: 1.5px;
+    text-align: JUSTIFY;
+    overflow: auto;
+    text-transform: uppercase;
   }
 
   h2{
-    font-weight: normal;
+    text-indent: 1.5rem;
+    font-family: AGENCYR;
+    font-weight: bold;
+    padding: 1rem;
+  }
+
+  p{
+    font-family: AGENCYR;
+    letter-spacing: 1px;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-indent: 2rem;
     font-size: 1.2rem;
-    text-align: center;
-    overflow: auto;
-    text-transform: uppercase;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img{
+      margin-top: 1rem;
+      width: 90%;
+    }
   }
 
   .header {

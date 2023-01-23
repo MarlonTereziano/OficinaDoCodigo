@@ -13,6 +13,7 @@ import { DropDown } from "../../../components/DropDown";
 
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
+import atv1 from "../../../assets/images/Prints/atv1.png";
 
 import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
@@ -63,7 +64,7 @@ export function Exercise1() {
     <Container>
       <Header />
       <TopBar />
-      {aux === 5 ? (<DropDown page="/ex2"/>):(<></>)}
+      {aux === 5 ? <DropDown page="/ex2" /> : <></>}
       <ContentText>
         <button className="header" onClick={handleOpen}>
           {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é programação em
@@ -86,7 +87,7 @@ export function Exercise1() {
         </button>
         {isOpenAtv ? (
           <>
-            <h2>TABULEIRO DO PANDA NÍVEL 1 !</h2>
+            <h2>TABULEIRO DO PANDA NÍVEL 1!</h2>
             <p>
               NESTE PRIMEIRO NÍVEL LEVAREMOS O PANDA AO SEU ALIMENTO (BAMBU)!{" "}
             </p>
@@ -94,6 +95,17 @@ export function Exercise1() {
               {" "}
               PARA ISSO, UTILIZAREMOS O BLOCO SIGA, QUE PODE SER ENCAIXADO MAIS
               DE UMA VEZ EM SEGUIDA!
+            </p>
+            <p>
+              INICIAREMOS CLICANDO NO BOTÃO DIREÇÃO, LOGO AO LADO DIREITO DESTE
+              TEXTO.
+              <br />
+              <img src={atv1} alt="" />
+              <br />
+            </p>
+            <p>
+              APÓS ISSO, BASTA ARRASTAR O BLOCO SIGA PARA O QUADRADO DE
+              TRABALHO. ASSIM, O PANDA COMEÇA A SE MOVIMENTAR!
             </p>
           </>
         ) : (

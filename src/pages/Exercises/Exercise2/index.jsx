@@ -12,6 +12,7 @@ import { DropDown } from "../../../components/DropDown";
 
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
+import atv2 from "../../../assets/images/Prints/atv2.png";
 
 import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
@@ -35,7 +36,6 @@ export function Exercise2() {
         console.log("Esses blocos não encaixam!");
       }
     }
-    
   }
 
   const handleOpen = () => {
@@ -49,18 +49,18 @@ export function Exercise2() {
     <Container>
       <Header />
       <TopBar />
-      {javascriptCode === "5" ? (<DropDown page="/ex3"/>):(<></>)}
+      {javascriptCode === "5" ? <DropDown page="/ex3" /> : <></>}
       <ContentText>
         <button className="header" onClick={handleOpen}>
           {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é programação em
           blocos?
         </button>
         {isOpen ? (
-          <h2>
-            Resumidamente uma linguagem de programação baseada em blocos
-            funciona como um quebra-cabeça, no qual cada peça é um comando e
-            quando montamos uma sequência de peças conseguimos escrever um
-            programa.
+          <h2 className="descriptionBLock">
+            Programação em blocos é um conjunto de instruções que se pode dar ao
+            computador para realizar inúmeras ativididades, como por exemplo,
+            mover personagens em um tabuleiro! "Blocks" é uma linguagem de
+            programação que permite criar animações, gráficos e jogos.
           </h2>
         ) : (
           <></>
@@ -71,26 +71,28 @@ export function Exercise2() {
           Descrição da Atividade
         </button>
         {isOpenAtv ? (
-          <h2>
-            Loren Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti in animi officia harum, provident et deserunt ducimus
-            accusantium similique hic nostrum dolorum dolor natus autem minus
-            mollitia! Quasi, sed culpa. Loren Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti in animi officia harum,
-            provident et deserunt ducimus accusantium similique hic nostrum
-            dolorum dolor natus autem minus mollitia! Quasi, sed culpa. Loren
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in
-            animi officia harum, provident et deserunt ducimus accusantium
-            similique hic nostrum dolorum dolor natus autem minus mollitia!
-            Quasi, sed culpa. Loren Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Deleniti in animi officia harum, provident et
-            deserunt ducimus accusantium similique hic nostrum dolorum dolor
-            natus autem minus mollitia! Quasi, sed culpa. Loren Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Deleniti in animi
-            officia harum, provident et deserunt ducimus accusantium similique
-            hic nostrum dolorum dolor natus autem minus mollitia! Quasi, sed
-            culpa.
-          </h2>
+          <>
+            <h2>TABULEIRO DO PANDA NÍVEL 2!</h2>
+            <p>
+              NO SEGUNDO NÍVEL LEVAREMOS NOVAMENTE O PANDA AO SEU ALIMENTO
+              (BAMBU)!{" "}
+            </p>
+            <p>
+              {" "}
+              PARA ISSO, UTILIZAREMOS NOVAMENTE O BLOCO SIGA, MAS DESSA VEZ
+              VAMOS SELECIONAR O NÚMERO DE PASSOS PARA O PANDA SE MOVER.{" "}
+            </p>
+            <p>
+              <img src={atv2} alt="" />
+              <br />
+            </p>
+            <p>
+              PARA SELECIONAR A QUANTIDADE DE PASSOS, BASTA ARRASTAR O BLOCO
+              SIGA PARA O QUADRADO DE TRABALHO, E CLICAR NO NÚMERO DENTRO DO
+              BLOCO (COMO MOSTRADO NA IMAGEM). ASSIM, O PANDA COMEÇA A SE
+              MOVIMENTAR!
+            </p>
+          </>
         ) : (
           <></>
         )}
@@ -111,7 +113,11 @@ export function Exercise2() {
       />
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
-        <Panda src={panda} alt="panda" move={5 * parseInt(javascriptCode) + "rem"} />
+        <Panda
+          src={panda}
+          alt="panda"
+          move={5 * parseInt(javascriptCode) + "rem"}
+        />
         <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
     </Container>
