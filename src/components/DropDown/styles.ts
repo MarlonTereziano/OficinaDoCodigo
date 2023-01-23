@@ -73,7 +73,7 @@ export const ContainerOpen = styled.span`
 
     button:hover{
       cursor: pointer;
-      color: var(--black);
+      color: var(--greenLight);
       text-decoration: underline;
     }
 `;
