@@ -64,7 +64,7 @@ export const Container = styled.div`
 
 export const ContentText = styled.div`
   margin-top: 7.5vw;
-  margin-left: 0.7vw;
+  margin-left: 1vw;
   padding: 0.8rem;
   width: 30vw;
   height: 78vh;
@@ -103,13 +103,11 @@ export const ContentText = styled.div`
     font-family: AGENCYR;
     font-weight: bold;
     padding: 1rem;
-    p img{
-      width: 60%;
-    }
   }
 
   p{
     font-family: AGENCYR;
+    font-weight: bold;
     letter-spacing: 1px;
     padding: 1rem;
     padding-top: 0;
@@ -124,18 +122,23 @@ export const ContentText = styled.div`
 
     img{
       margin-top: 1rem;
-      width: 90%;
+      width: 80%;
+    }
+
+    .menu2{
+      width: 40%;
     }
   }
 
   .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 28vw;
     height: 2.7rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-left: 1rem;
     text-transform: uppercase;
     font-family: MontserratExtraBold;
     letter-spacing: 0.005vw;
@@ -150,7 +153,6 @@ export const ContentText = styled.div`
       height: 400%;
     }
   }
-
   .header:hover {
     cursor: pointer;
     filter: brightness(0.9);

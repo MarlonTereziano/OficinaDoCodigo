@@ -107,6 +107,7 @@ export const ContentText = styled.div`
 
   p{
     font-family: AGENCYR;
+    font-weight: bold;
     letter-spacing: 1px;
     padding: 1rem;
     padding-top: 0;
@@ -128,11 +129,12 @@ export const ContentText = styled.div`
   .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 28vw;
     height: 2.7rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-left: 1rem;
     text-transform: uppercase;
     font-family: MontserratExtraBold;
     letter-spacing: 0.005vw;

@@ -63,7 +63,7 @@ export function Exercise2() {
               opção num menu. E, por incrível que pareça, é algo extremamente
               simples de ser feito!
               <p>
-                <img src={menu} alt="" />
+                <img src={menu} className="menu2" alt="" />
               </p>
             </h2>
           </>

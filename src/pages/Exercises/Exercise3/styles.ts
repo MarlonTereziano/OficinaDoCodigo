@@ -118,6 +118,7 @@ export const ContentText = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-weight: bold;
 
     img {
       margin-top: 1rem;
@@ -128,9 +129,10 @@ export const ContentText = styled.div`
   .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 28vw;
     height: 2.7rem;
+    padding-left: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     text-transform: uppercase;
