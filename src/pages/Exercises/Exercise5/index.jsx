@@ -16,6 +16,7 @@ import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
 export function Exercise5() {
   const [javascriptCode, setJavascriptCode] = useState("");
+  let [counter, setCounter] = useState(0);
   const [aux, setAux] = useState(0);
   const [setXml] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,6 @@ export function Exercise5() {
     try {
       const code = Blockly.JavaScript.workspaceToCode(workspace);
       setJavascriptCode(code);
-      console.log(javascriptCode);
     } catch (e) {
       if (alertVar === 0) {
         alertVar += 1;
@@ -36,7 +36,9 @@ export function Exercise5() {
       }
     }
 
-    setAux(javascriptCode[28] * javascriptCode[43]);
+    if (javascriptCode.indexOf("esquerda") !== -1) {
+      console.log(javascriptCode.indexOf("esquerda"));
+    }
   }
 
   const handleOpen = () => {
@@ -51,46 +53,33 @@ export function Exercise5() {
       <Header />
       <TopBar />
       <ContentText>
-        <button className="header" onClick={handleOpen}>
-          {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que é programação em
-          blocos?
-        </button>
-        {isOpen ? (
-          <h2>
-            Resumidamente uma linguagem de programação baseada em blocos
-            funciona como um quebra-cabeça, no qual cada peça é um comando e
-            quando montamos uma sequência de peças conseguimos escrever um
-            programa.
-          </h2>
-        ) : (
-          <></>
-        )}
-
         <button className="header" onClick={handleOpenAtv}>
           {isOpenAtv ? <BiCaretDown /> : <BiCaretRight />}
           Descrição da Atividade
         </button>
         {isOpenAtv ? (
-          <h2>
-            Loren Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti in animi officia harum, provident et deserunt ducimus
-            accusantium similique hic nostrum dolorum dolor natus autem minus
-            mollitia! Quasi, sed culpa. Loren Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti in animi officia harum,
-            provident et deserunt ducimus accusantium similique hic nostrum
-            dolorum dolor natus autem minus mollitia! Quasi, sed culpa. Loren
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in
-            animi officia harum, provident et deserunt ducimus accusantium
-            similique hic nostrum dolorum dolor natus autem minus mollitia!
-            Quasi, sed culpa. Loren Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Deleniti in animi officia harum, provident et
-            deserunt ducimus accusantium similique hic nostrum dolorum dolor
-            natus autem minus mollitia! Quasi, sed culpa. Loren Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Deleniti in animi
-            officia harum, provident et deserunt ducimus accusantium similique
-            hic nostrum dolorum dolor natus autem minus mollitia! Quasi, sed
-            culpa.
-          </h2>
+          <>
+            <h2>TABULEIRO DO PANDA NÍVEL 4!</h2>
+            <p>
+              NO QUARTO NÍVEL LEVAREMOS O PANDA AO SEU ALIMENTO COM A AJUDA DE
+              LAÇOS E NÚMEROS SEPARADOS!{" "}
+            </p>
+            <p>
+              {" "}
+              NESSA ATIVIDADE, UTILIZAREMOS O BLOCO "REPETIR", E DENTRO DELE O
+              BLOCO "SIGA", COMO NA ATIVIDADE ANTERIOR. PORÉM, DESSA VEZ
+              ADICIONAREMOS O BLOCO NÚMERO DENTRO DO LAÇO, QUE PERMITE ADICIONAR
+              QUALQUER VALOR DIGITADO PELO TECLADO{" "}
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              PARA SELECIONAR A QUANTIDADE DE PASSOS, BASTA CLICAR DENTRO DO
+              BLOCO NÚMERO (APÓS ADICIONÁ-LO DENTRO DO LOOP), E DIGITAR O NÚMERO
+              DE VEZES QUE DESEJA ANDAR. ASSIM, O PANDA COMEÇA A SE MOVIMENTAR!
+            </p>
+          </>
         ) : (
           <></>
         )}
@@ -111,7 +100,13 @@ export function Exercise5() {
       />
       <ContentGame>
         <h1 className="titleGame">VEJA FUNCIONANDO!</h1>
-        <Panda src={panda} alt="panda" move={5 * aux + "rem"} />
+        <Panda
+          src={panda}
+          alt="panda"
+          move={5 * aux + "rem"}
+          direita={"12.5rem"}
+        />
+        <h1>{javascriptCode}</h1>
         <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
     </Container>

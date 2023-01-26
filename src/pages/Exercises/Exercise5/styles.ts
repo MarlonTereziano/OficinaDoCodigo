@@ -3,6 +3,8 @@ import grade from "../../../assets/images/grade6x6.jpg";
 
 interface Props {
   move: any;
+  direita: any;
+  esquerda: any;
 }
 
 export const Container = styled.div`
@@ -54,6 +56,11 @@ export const Container = styled.div`
     background-color: white;
     width: 6rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 1;
+  }
+
+  .blocklyMainWorkspaceScrollbar{
+    z-index: 1;
   }
 `;
 
@@ -79,7 +86,6 @@ export const ContentText = styled.div`
     font-family: "MontserratExtraBold";
     float: top;
     font-size: 3rem;
-    margin-right: -0.3rem;
   }
 
   .descriptionBLock {
@@ -94,30 +100,43 @@ export const ContentText = styled.div`
     text-transform: uppercase;
   }
 
-  h2 {
+  h2{
     text-indent: 1.5rem;
     font-family: AGENCYR;
     font-weight: bold;
     padding: 1rem;
   }
 
-  p {
+  p{
     font-family: AGENCYR;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     padding: 1rem;
     padding-top: 0;
     padding-bottom: 0;
-    text-indent: 1.5rem;
+    text-indent: 2rem;
     font-size: 1.2rem;
     text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+
+    img{
+      margin-top: 1rem;
+      width: 100%;
+    }
   }
 
   .header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 2.7vw;
+    justify-content: flex-start;
+    width: 28vw;
+    height: 2.7rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-transform: uppercase;
     font-family: MontserratExtraBold;
     letter-spacing: 0.005vw;
@@ -128,8 +147,8 @@ export const ContentText = styled.div`
     border-bottom: 1px solid;
 
     svg {
-      width: 5%;
-      height: 100%;
+      width: 10%;
+      height: 400%;
     }
   }
 
@@ -175,8 +194,8 @@ export const ContentGame = styled.div`
 
   .bambu {
     position: absolute;
-    margin-top: -13.8rem;
-    margin-right: -13rem;
+    margin-top: 1.5rem;
+    margin-right:-7.6rem;
     width: 2.5rem;
   }
 `;
@@ -184,8 +203,8 @@ export const ContentGame = styled.div`
 export const Panda = styled.img`
   display: flex;
   align-self: start;
-  margin-top: -0.3rem;
-  margin-right: 12.5rem;
+  margin-top: 2.2rem;
+  margin-right: ${(props: Props) => props.direita};;
   width: 50px;
   margin-left: ${(props: Props) => props.move};
 `;
