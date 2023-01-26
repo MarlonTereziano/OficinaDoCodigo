@@ -25,6 +25,8 @@ export function Exercise5() {
   let alertVar = 0;
 
   function workspaceDidChange(workspace) {
+    var rootBlock = Blockly.mainWorkspace.getTopBlocks();
+    console.log(rootBlock[0]);
     try {
       const code = Blockly.JavaScript.workspaceToCode(workspace);
       setJavascriptCode(code);
@@ -35,11 +37,12 @@ export function Exercise5() {
         console.log("Esses blocos não encaixam!");
       }
     }
-
-    if (javascriptCode.indexOf("esquerda") !== -1) {
-      console.log(javascriptCode.indexOf("esquerda"));
-    }
+    // console.log(aux[0].getChildren());
+  
+    
   }
+
+  
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
