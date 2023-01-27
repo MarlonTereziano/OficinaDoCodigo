@@ -42,15 +42,19 @@ export function Exercise1() {
         console.log("Esses blocos não encaixam!");
       }
     }
-    setCountBlocks(Blockly.mainWorkspace.getTopBlocks().length);
-    setCountBlocks2(Blockly.mainWorkspace.getAllBlocks().length);
-    if (countBlocks === 0 && countBlocks2 === 0) {
-      setAux(0);
-    } else {
-      setAux(countBlocks2 - countBlocks + 1);
+
+    let countBlocksAux = Blockly.mainWorkspace.getAllBlocks();
+    let count = 0;
+    let childBlock;
+
+    if (countBlocksAux[0]) {
+      childBlock = countBlocksAux[0].childBlocks_
+      while (childBlock?.length) {
+        childBlock = childBlock[0]?.childBlocks_;
+        count++;
+      }
+      setAux(count+1);
     }
-    console.log(aux);
-    console.log(countBlocks);
   }
 
   const handleOpen = () => {
