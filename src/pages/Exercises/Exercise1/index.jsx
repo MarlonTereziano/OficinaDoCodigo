@@ -93,7 +93,7 @@ export function Exercise1() {
           <>
             <h2>TABULEIRO DO PANDA NÍVEL 1!</h2>
             <p>
-              NESTE PRIMEIRO NÍVEL LEVAREMOS O PANDA AO SEU ALIMENTO (BAMBU)!{" "}
+              NESTE PRIMEIRO NÍVEL, LEVAREMOS O PANDA AO SEU ALIMENTO (BAMBU)!{" "}
             </p>
             <p>
               {" "}

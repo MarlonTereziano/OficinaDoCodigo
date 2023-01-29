@@ -16,17 +16,21 @@ import { BiCaretDown, BiCaretRight } from "react-icons/bi";
 
 export function Exercise5() {
   const [javascriptCode, setJavascriptCode] = useState("");
-  let [counter, setCounter] = useState(0);
   const [aux, setAux] = useState(0);
   const [setXml] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenAtv, setIsOpenAtv] = useState(false);
-
+  let [counter, setCounter] = useState(0);
+  let [direita, setDireita] = useState(0);
+  let [esquerda, setEsquerda] = useState(0);
+  let countBlocksAux = Blockly.mainWorkspace.getAllBlocks();
+  let count = 0;
+  let countDireita = 0;
+  let countEsquerda = 0;
+  let childBlock;
   let alertVar = 0;
 
   function workspaceDidChange(workspace) {
-    var rootBlock = Blockly.mainWorkspace.getTopBlocks();
-    console.log(rootBlock[0]);
     try {
       const code = Blockly.JavaScript.workspaceToCode(workspace);
       setJavascriptCode(code);
@@ -37,12 +41,25 @@ export function Exercise5() {
         console.log("Esses blocos não encaixam!");
       }
     }
-    // console.log(aux[0].getChildren());
-  
-    
-  }
 
-  
+    console.log(countBlocksAux[0]);
+
+    if (countBlocksAux[0]) {
+      childBlock = countBlocksAux[0].childBlocks_;
+      console.log(childBlock);
+      while (childBlock[0]?.length) {
+        childBlock = childBlock[0]?.childBlocks_;
+        count++;
+      }
+      setAux(count + 1);
+      console.log(aux);
+
+      // if (countBlocksAux[0].type === "siga5" && countBlocksAux[0].childBlocks_[0].type === "esquerda5") {
+      //   setDireita(++countDireita);
+      //   // console.log(direita);
+      // }
+    }
+  }
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -109,7 +126,7 @@ export function Exercise5() {
           move={5 * aux + "rem"}
           direita={"12.5rem"}
         />
-        <h1>{javascriptCode}</h1>
+        <h1>{direita}</h1>
         <img className="bambu" src={bambu} alt="bambu" />
       </ContentGame>
     </Container>
