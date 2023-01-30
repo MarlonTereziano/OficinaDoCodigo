@@ -12,7 +12,7 @@ export const TopBar = () => {
       <button onClick={() => navigate("/ex2")}>2</button>
       <button onClick={() => navigate('/ex3')}>3</button>
       <button onClick={() => navigate("/ex4")}>4</button>
-      <button onClick={() => navigate("/ex5")}>5</button>
+      {/* <button onClick={() => navigate("/ex5")}>5</button> */}
     </Container>
   );
 };
