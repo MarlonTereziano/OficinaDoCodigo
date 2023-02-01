@@ -21,8 +21,8 @@ Blockly.setLocale(language);
 
 export function Exercise1() {
   const [javascriptCode, setJavascriptCode] = useState("");
-  const [countBlocks, setCountBlocks] = useState();
-  const [countBlocks2, setCountBlocks2] = useState();
+  // const [countBlocks, setCountBlocks] = useState();
+  // const [countBlocks2, setCountBlocks2] = useState();
   const [aux, setAux] = useState(0);
   const [setXml] = useState("");
   const [isOpen, setIsOpen] = useState(false);
