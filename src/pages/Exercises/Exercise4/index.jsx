@@ -8,7 +8,7 @@ import { Container, ContentGame, ContentText, Panda } from "./styles";
 
 import { Header } from "../../../components/header";
 import { TopBar } from "../../../components/topBar";
-import { DropDown } from "../../../components/DropDown";
+import { DropDown } from "../../../components/Modal";
 
 import panda from "../../../assets/images/panda.png";
 import bambu from "../../../assets/images/bambu.png";
