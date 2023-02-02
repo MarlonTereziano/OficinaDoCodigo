@@ -43,7 +43,6 @@ Blockly.Blocks["controls_repeat_ext2"] = {
           ["3", "3"],
           ["4", "4"],
           ["5", "5"],
-          ["6", "6"],
         ]),
         "NUM"
       )

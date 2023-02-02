@@ -54,7 +54,7 @@ export function Exercise3() {
     <Container>
       <Header />
       <TopBar />
-      {aux === 5 ? <DropDown page="/ex4" /> : <></>}
+      {aux === 4 ? <DropDown page="/ex4" /> : <></>}
       <ContentText>
         <button className="header" onClick={handleOpen}>
           {isOpen ? <BiCaretDown /> : <BiCaretRight />}O que são blocos com
