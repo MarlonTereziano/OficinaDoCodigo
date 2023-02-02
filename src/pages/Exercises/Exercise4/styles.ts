@@ -192,7 +192,7 @@ export const ContentGame = styled.div`
 
   .bambu {
     position: absolute;
-    margin-top: -13.8rem;
+    margin-top: -8.8rem;
     margin-right: -13rem;
     width: 2.5rem;
   }
@@ -201,7 +201,7 @@ export const ContentGame = styled.div`
 export const Panda = styled.img`
   display: flex;
   align-self: start;
-  margin-top: -0.3rem;
+  margin-top: 2.3rem;
   margin-right: 12.5rem;
   width: 50px;
   margin-left: ${(props: Props) => props.move};
